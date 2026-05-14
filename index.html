@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentapalli Keerthi | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fixed Navbar -->
+    <header class="navbar">
+        <nav class="container">
+            <div class="logo">PENTAPALLI KEERTHI</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Keerthi</span></h1>
+                    <p class="role">Computer Science Undergraduate | Aspiring Software Engineer</p>
+                    <p class="summary">I specialize in IoT, Cybersecurity, and Blockchain Technology,
+                        with a strong passion for building secure, efficient, and innovative solutions
+                        that drive impactful technological advancements.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                        <a href="Resume.pdf" class="btn btn-hero-social resume-link" target="_blank">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="https://www.linkedin.com/in/pentapallikeerthi" class="btn btn-hero-social linkedin"
+                            target="_blank">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <!-- Profile Picture -->
+                <div class="hero-image">
+                    <img src="profile.png" alt="Pentapalli Keerthi" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container reveal">
+            <h2>About Me</h2>
+            <p>I am a Computer Science undergraduate specializing in IoT, Cybersecurity, and Blockchain Technology. With
+                strong interests in Artificial Intelligence, Web Development, and Problem-Solving. I am passionate about
+                leveraging technology to build secure, efficient, and innovative solutions. I aim to continuously learn,
+                apply my skills in real-world projects, and contribute to impactful technological advancements.</p>
+        </section>
+
+        <!-- Education Section -->
+        <!-- Skills Section -->
+        <section id="skills" class="container reveal">
+            <h2>Technical Skills & Tools</h2>
+            <div class="skills-grid">
+                <!-- Category 1: Programming -->
+                <div class="skill-card-modern" onclick="showSkillDetails('programming', this)">
+                    <div class="icon-circle">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Programming & Technologies <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>Building efficient and scalable solutions with a focus on real-world problem solving.</p>
+                </div>
+                <!-- Category 2: Tools -->
+                <div class="skill-card-modern" onclick="showSkillDetails('tools', this)">
+                    <div class="icon-circle">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Tools & Platforms <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>Utilizing modern tools and platforms to support efficient and structured development.</p>
+                </div>
+                <!-- Category 3: Soft Skills -->
+                <div class="skill-card-modern" onclick="showSkillDetails('soft', this)">
+                    <div class="icon-circle">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Soft Skills <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>Bringing a collaborative mindset and clear communication to effectively contribute in team
+                        environments.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Skills Display -->
+            <div id="skills-detail-view" class="skills-detail-view">
+                <h3 id="detail-title">Category</h3>
+                <ul id="detail-tags" class="skill-tags"></ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container reveal">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>E-Swasthya Connect</h3>
+                    <p><strong>Overview:</strong> Developed a web-based healthcare platform connecting villagers, ANMs,
+                        and doctors.</p>
+                    <p><strong>Impact:</strong> Improved medical access in rural areas through real-time case reporting
+                        and consultations.</p>
+                    <div class="tools">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <a href="#" class="btn btn-small"></a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Sentinel AI</h3>
+                    <p><strong>Overview:</strong> Built during Sankalp Hackathon 2025 at MVGR College.</p>
+                    <p><strong>Solution:</strong> AI-driven system for real-time detection of harassment and abusive
+                        communication.</p>
+                    <div class="tools"><span>AI</span> <span>Python</span> <span>Hackathon</span></div>
+                    <a href="#" class="btn btn-small"></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container reveal">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Bachelor of Technology in Computer Science and Engineering - (81%)</h3>
+                    <p class="uni-name">MVGR College of Engineering, Vizianagaram | 2023 - 2027</p>
+                    <p>Specialization: Internet of Things, Cybersecurity & Blockchain Technology</p>
+                </div>
+                <div class="education-card">
+                    <h3>Intermediate Education - (91%)</h3>
+                    <p class="uni-name">Sri Chaitanya Junior College, Vizianagaram | 2021 - 2023</p>
+                    <p>Focus on Mathematics, Physics, and Chemistry</p>
+                </div>
+                <div class="education-card">
+                    <h3>Secondary Education - (100%)</h3>
+                    <p class="uni-name">Gurajada School, Vizianagaram | 2020 - 2021</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship & Certifications -->
+        <section id="certifications" class="container reveal">
+            <h2>Internships & Certifications</h2>
+            <div class="certifications-scroll">
+                <a href="proofs/salesforce_developer.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/salesforce_developer.jpg" alt="Salesforce Developer">
+                        <div class="cert-info">
+                            <h3>Salesforce Developer</h3>
+                            <p>Agentblazer Champion Track</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/Micro-Certification - Welcome to ServiceNow.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/Micro-Certification - Welcome to ServiceNow.jpg"
+                            alt="Micro-Certification - Welcome to ServiceNow">
+                        <div class="cert-info">
+                            <h3>Micro-Certification - Welcome to ServiceNow</h3>
+                            <p>ServiceNow</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/data_engineering_internship.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/data_engineering_internship.jpg" alt="Data Engineering Internship">
+                        <div class="cert-info">
+                            <h3>Data Engineering Virtual Internship</h3>
+                            <p>AWS / Forage</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/cyber_security_workshop.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/cyber_security_workshop.jpg" alt="Cyber Security Workshop">
+                        <div class="cert-info">
+                            <h3>Cyber Security Workshop & Quiz Winner</h3>
+                            <p>CyberThreya | 2-Day Workshop + 1st Prize</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/aws_data_engineering.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/aws_data_engineering.jpg" alt="AWS Data Engineering">
+                        <div class="cert-info">
+                            <h3>AWS Academy - Data Engineering</h3>
+                            <p>Cloud Engineering Foundations</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/aws_ml_foundations.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/aws_ml_foundations.jpg" alt="AWS Machine Learning">
+                        <div class="cert-info">
+                            <h3>AWS Academy - Machine Learning</h3>
+                            <p>Machine Learning Foundations</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/Sankalp certificate.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/Sankalp certificate.jpg" alt="Sankalp Hackathon">
+                        <div class="cert-info">
+                            <h3>Sankalp Hackathon</h3>
+                            <p>Recognition for Dedication and Commitment</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="proofs/Qubitech.jpg" target="_blank" class="cert-link">
+                    <div class="cert-card">
+                        <img src="proofs/Qubitech.jpg" alt="Qubitech Certification">
+                        <div class="cert-info">
+                            <h3>Qubitech Certification</h3>
+                            <p>Advanced Technology Training</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container reveal">
+            <h2>Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 9951973548</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>pentapallikeerthi@gmail.com</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/pentapallikeerthi" class="social-box linkedin"
+                            target="_blank">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/keerthi0079" class="social-box github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.instagram.com/__keerthiii__09/" class="social-box instagram"
+                            target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <form action="#" class="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Pentapalli Keerthi | Connect on <a href="https://www.linkedin.com/in/pentapallikeerthi"
+                    target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Skills Details Display
+        const skillsData = {
+            programming: {
+                title: "Programming & Technologies",
+                skills: ["C", "C++", "Python", "Java", "HTML", "CSS", "JavaScript"]
+            },
+            tools: {
+                title: "Tools & Platforms",
+                skills: ["GitHub", "VS Code", "Linux", "Figma", "Canva"]
+            },
+            soft: {
+                title: "Soft Skills",
+                skills: [
+                    "Problem Solving",
+                    "Communication",
+                    "Teamwork",
+                    "Adaptability",
+                    "Leadership",
+                    "Fast Learner",
+                    "Team Management",
+                    "Time Management"
+                ]
+            }
+        };
+
+        let currentActiveCard = null;
+
+        function showSkillDetails(category, cardElement) {
+            const detailView = document.getElementById('skills-detail-view');
+            const titleEl = document.getElementById('detail-title');
+            const tagsEl = document.getElementById('detail-tags');
+
+            if (currentActiveCard === cardElement) {
+                // If clicking the currently open card, just close it
+                detailView.classList.remove('active');
+                cardElement.classList.remove('active');
+                currentActiveCard = null;
+                return;
+            }
+
+            if (currentActiveCard) {
+                currentActiveCard.classList.remove('active');
+            }
+
+            // Set new active card
+            cardElement.classList.add('active');
+            currentActiveCard = cardElement;
+
+            // Update content dynamically
+            const data = skillsData[category];
+            titleEl.innerText = data.title;
+            tagsEl.innerHTML = data.skills.map(skill => `<li>${skill}</li>`).join('');
+
+            // Activate view
+            detailView.classList.add('active');
+        }
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
