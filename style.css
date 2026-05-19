@@ -438,23 +438,112 @@ body {
 }
 
 /* Certifications Horizontal Scroll */
+.certifications-wrapper {
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Fading Edges */
+.certifications-wrapper::before,
+.certifications-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 2rem; /* Matches padding-bottom of .certifications-scroll */
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.certifications-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-dark), transparent);
+}
+
+.certifications-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-dark), transparent);
+}
+
 .certifications-scroll {
     display: flex;
     overflow-x: auto;
     gap: 2.5rem;
-    margin-top: 2rem;
     padding-bottom: 2rem;
     scroll-behavior: smooth;
     /* Hide scrollbar */
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
+    width: 100%;
 }
 
 .certifications-scroll::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari and Opera */
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+
+.scroll-btn.left {
+    left: -20px;
+}
+
+.scroll-btn.right {
+    right: -20px;
+}
+
+.scroll-btn:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(-50%) scale(1.1);
+    border-color: var(--primary);
+}
+
+.scroll-btn i {
+    font-size: 1.1rem;
+    margin: 0; /* Override generic .btn i if any */
+}
+
+@media (max-width: 1200px) {
+    .scroll-btn.left { left: 5px; }
+    .scroll-btn.right { right: 5px; }
+}
+
+@media (max-width: 768px) {
+    .scroll-btn {
+        width: 38px;
+        height: 38px;
+        background: rgba(30, 41, 59, 0.85); /* Slightly less transparent on mobile for better visibility */
+    }
+    .scroll-btn.left { left: 2px; }
+    .scroll-btn.right { right: 2px; }
+    .scroll-btn i { font-size: 0.9rem; }
+    
+    .certifications-wrapper::before,
+    .certifications-wrapper::after {
+        width: 40px;
+    }
 }
 
 .cert-link {
