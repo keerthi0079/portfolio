@@ -129,14 +129,22 @@
                     <a href="#" class="btn btn-small"></a>
                 </article>
 
-                <article class="project-card">
-                    <h3>Sentinel AI</h3>
-                    <p><strong>Overview:</strong> Built during Sankalp Hackathon 2025 at MVGR College.</p>
-                    <p><strong>Solution:</strong> AI-driven system for real-time detection of harassment and abusive
-                        communication.</p>
-                    <div class="tools"><span>AI</span> <span>Python</span> <span>Hackathon</span></div>
-                    <a href="#" class="btn btn-small"></a>
-                </article>
+               <article class="project-card">
+                        <h3>Infinity Business Solutions</h3>
+
+                        <p><strong>Overview:</strong> Developed a fully responsive business website showcasing company services and business information.</p>
+
+                        <p><strong>Features:</strong> Implemented service inquiry forms, responsive navigation, contact functionality, and interactive UI elements.</p>
+
+                        <div class="tools">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </a>
+                </article>  
             </div>
         </section>
 
@@ -169,6 +177,24 @@
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="certifications-scroll" id="cert-scroll-container">
+                    <a href="proofs/ServiceNow_CSA.jpg" target="_blank" class="cert-link">
+                        <div class="cert-card">
+                            <img src="proofs/ServiceNow_CSA.jpg" alt="ServiceNow CSA">
+                            <div class="cert-info">
+                                <h3>ServiceNow CSA</h3>
+                                <p>Certified System Administrator</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="proofs/ServiceNow_CAD.jpg" target="_blank" class="cert-link">
+                        <div class="cert-card">
+                            <img src="proofs/ServiceNow_CAD.jpg" alt="ServiceNow CAD">
+                            <div class="cert-info">
+                                <h3>ServiceNow CAD</h3>
+                                <p>Certified Application Developer</p>
+                            </div>
+                        </div>
+                    </a>
                     <a href="proofs/salesforce_developer.jpg" target="_blank" class="cert-link">
                         <div class="cert-card">
                             <img src="proofs/salesforce_developer.jpg" alt="Salesforce Developer">
@@ -256,11 +282,11 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>+91 9951973548</span>
+                        <a href="tel:+919951973548" style="color: inherit; text-decoration: none;">+91 9951973548</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>pentapallikeerthi@gmail.com</span>
+                        <a href="mailto:pentapallikeerthi@gmail.com" style="color: inherit; text-decoration: none;">pentapallikeerthi@gmail.com</a>
                     </div>
 
                     <div class="social-links">
@@ -278,22 +304,29 @@
                     </div>
                 </div>
 
-                <form action="#" class="contact-form">
+                <form id="contact-form" action="https://formsubmit.co/pentapallikeerthi@gmail.com" method="POST" class="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" id="email-subject" value="New Portfolio Message!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Anti-spam honeypot field -->
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" placeholder="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                    <button type="submit" id="submit-btn" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> <span>Send Message</span>
                     </button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
             </div>
         </section>
@@ -441,6 +474,84 @@
                 scrollPos = scrollContainer.scrollLeft;
             }
         });
+        // Contact Form Handling with FormSubmit
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm && submitBtn && formStatus) {
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                const btnIcon = submitBtn.querySelector('i');
+                const btnText = submitBtn.querySelector('span');
+
+                const nameVal = nameInput.value.trim();
+                const emailVal = emailInput.value.trim();
+                const messageVal = messageInput.value.trim();
+                const subjectVal = 'New Portfolio Message from ' + nameVal;
+
+                const mailBody = 'Name: ' + nameVal + '\nEmail: ' + emailVal + '\n\nMessage:\n' + messageVal;
+                const mailtoUrl = 'mailto:pentapallikeerthi@gmail.com?subject=' + encodeURIComponent(subjectVal) + '&body=' + encodeURIComponent(mailBody);
+
+                // Local Preview Mode Check
+                if (window.location.protocol === 'file:') {
+                    formStatus.className = 'form-status info show';
+                    formStatus.innerHTML = '<i class="fas fa-info-circle"></i> <strong>Local Preview Mode:</strong> Form delivery services require a web server. Please double-click <strong>start-server.bat</strong> in your project folder to test live sending, or <a href="' + mailtoUrl + '" style="color:#38bdf8; text-decoration:underline; font-weight:600;">click here to send via Email App</a>.';
+                    return;
+                }
+
+                // Web server mode (http://localhost:3000 or published website)
+                submitBtn.disabled = true;
+                if (btnIcon) btnIcon.className = 'fas fa-spinner fa-spin';
+                if (btnText) btnText.textContent = 'Sending...';
+
+                formStatus.className = 'form-status info show';
+                formStatus.innerHTML = '<i class="fas fa-paper-plane"></i> Sending your message...';
+
+                try {
+                    const response = await fetch('https://formsubmit.co/ajax/pentapallikeerthi@gmail.com', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: nameVal,
+                            email: emailVal,
+                            message: messageVal,
+                            _subject: subjectVal,
+                            _template: 'table',
+                            _captcha: 'false'
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok && (data.success === 'true' || data.success === true)) {
+                        formStatus.className = 'form-status success show';
+                        formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully to pentapallikeerthi@gmail.com.';
+                        contactForm.reset();
+                    } else if (data.message && data.message.includes('Activation')) {
+                        formStatus.className = 'form-status info show';
+                        formStatus.innerHTML = '<i class="fas fa-envelope-open-text"></i> FormSubmit activation required for this domain. Please check your inbox (or spam) at pentapallikeerthi@gmail.com to activate.';
+                    } else {
+                        throw new Error(data.message || 'Unable to submit the message.');
+                    }
+                } catch (error) {
+                    console.warn('Form submission encountered an issue:', error);
+                    formStatus.className = 'form-status error show';
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + (error.message || 'Could not send message.') + ' <a href="' + mailtoUrl + '" style="color:#38bdf8; text-decoration:underline; margin-left:6px;">Send directly via Email</a>';
+                } finally {
+                    submitBtn.disabled = false;
+                    if (btnIcon) btnIcon.className = 'fas fa-paper-plane';
+                    if (btnText) btnText.textContent = 'Send Message';
+                }
+            });
+        }
     </script>
 </body>
 
