@@ -217,17 +217,71 @@
                     </div>
                 </article>
 
-                <!-- Project 2: AI-SOC -->
-                <article class="project-card">
-                    <h3>Autonomous AI Security Operations Center (AI-SOC)</h3>
-                    <p><strong>Overview:</strong> Developed an intelligent security monitoring platform that ingests, preprocesses, and normalizes cybersecurity events for centralized threat analysis.</p>
-                    <p><strong>Impact:</strong> Implemented Random Forest-based threat detection and attack classification with confidence scoring and real-time incident monitoring.</p>
+                <!-- Project 2: Sentriq AI-SOC -->
+                <article class="project-card featured-project">
+                    <span class="project-badge"><i class="fas fa-shield-alt"></i> Enterprise AI Cybersecurity • Major Project</span>
+                    <h3>Sentriq: Autonomous AI Security Operations Center (AI-SOC)</h3>
+                    <p><strong>Project Overview:</strong> An autonomous, explainable AI-powered Security Operations Center engineered to ingest high-volume network telemetry (UNSW-NB15 & CIC-IDS2017), classify multi-stage cyberattacks using Random Forest ensembles (96.67% accuracy), mathematically explain verdicts via SHAP TreeExplainer, eliminate 93.3% alert noise using sliding-window temporal correlation, calculate deterministic 4-factor risk scores, and orchestrate Human-in-the-Loop (HITL) incident containment.</p>
+                    
+                    <div class="project-feature-grid">
+                        <div class="project-feature-box">
+                            <h4><i class="fas fa-desktop"></i> Real-Time SOC Console</h4>
+                            <ul>
+                                <li>React 18, TypeScript, Vite & Tailwind CSS dashboard</li>
+                                <li>Live telemetry streamer & WebSocket hub integration</li>
+                                <li>Dynamic severity & attack distribution charts (Recharts)</li>
+                                <li>Incident logs with status filters (Open, Investigating, Resolved)</li>
+                            </ul>
+                        </div>
+                        <div class="project-feature-box">
+                            <h4><i class="fas fa-brain"></i> Dual ML Classifiers & XAI</h4>
+                            <ul>
+                                <li>Dual Random Forest ensemble (Binary + 6-Class categorizer)</li>
+                                <li>96.67% binary accuracy, 0.9669 F1-score & 0.0% False Positive Rate</li>
+                                <li>SHAP TreeExplainer feature attributions for forensic audits</li>
+                                <li>Rule-to-XAI consensus bridge verifying security heuristics</li>
+                            </ul>
+                        </div>
+                        <div class="project-feature-box">
+                            <h4><i class="fas fa-chart-line"></i> Correlation & 4-Factor Risk</h4>
+                            <ul>
+                                <li>15-minute sliding-window temporal alert correlation</li>
+                                <li>93.3% alert noise reduction, grouping unified attack stories</li>
+                                <li>Deterministic 4-Factor Risk: Severity, Conf, Asset, Impact</li>
+                                <li>Automated blast radius calculation across enterprise subnets</li>
+                            </ul>
+                        </div>
+                        <div class="project-feature-box">
+                            <h4><i class="fas fa-user-shield"></i> Multi-Agent & Containment</h4>
+                            <ul>
+                                <li>Triage, Correlation, Response & Reporting agents</li>
+                                <li>MITRE ATT&CK technique mapping (e.g., T1110, T1059)</li>
+                                <li>Human-in-the-Loop (HITL) containment for firewall drops</li>
+                                <li>Immutable response audit log & automated dossier reports</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="tools">
                         <span>Python</span>
-                        <span>Machine Learning</span>
+                        <span>FastAPI</span>
+                        <span>React 18</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>PostgreSQL</span>
+                        <span>SQLAlchemy</span>
                         <span>Random Forest</span>
-                        <span>Cybersecurity</span>
-                        <span>Threat Analysis</span>
+                        <span>Scikit-Learn</span>
+                        <span>SHAP (XAI)</span>
+                        <span>Recharts</span>
+                        <span>Docker</span>
+                        <span>MITRE ATT&CK</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/keerthi0079/Sentriq-AI-SOC" target="_blank" class="btn btn-project-primary">
+                            <i class="fab fa-github"></i> View GitHub Repository (Sentriq-AI-SOC)
+                        </a>
                     </div>
                 </article>
 
