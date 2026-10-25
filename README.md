@@ -73,15 +73,18 @@ Developed an intelligent security monitoring platform that ingests, preprocesses
 
 ---
 
-### 🏥 3. E-Swasthya Connect
-🛠️ **Tech Stack:** HTML5, CSS3, JavaScript, PHP, MySQL, Bootstrap
+### 🏥 3. Village Health Connect (E-Swasthya Connect) - Complete Healthcare Platform
+🛠️ **Tech Stack:** PHP (20+ Pages), MySQL (Normalized Schema), JavaScript, HTML5, CSS3, Bootstrap 5, XAMPP
 
 **Project Overview:**  
-Developed a web-based community healthcare platform connecting rural villagers, Auxiliary Nurse Midwives (ANMs), and qualified medical doctors.
+A comprehensive, production-ready community healthcare management system connecting rural villagers, ANMS health workers, and certified medical doctors for collaborative healthcare problem reporting, triage, and resolution.
 
-**Impact & Highlights:**
-- Improved healthcare access across rural communities through real-time incident reporting and telemedicine consultations.
-- Engineered secure patient data management and CRUD operations with intuitive, mobile-friendly interfaces.
+**Key Roles & Features:**
+- **Villager Dashboard:** Report medical problems with photo upload, view status tracking, real-time alerts, and emergency contact quick access.
+- **ANMS Member Dashboard:** "Assign to Me" claims unassigned area cases, "Update Status" records local resolution, "Escalate to Doctor" forwards complex cases, click-to-call villagers.
+- **Doctor Dashboard:** "Respond to Case" provides remote medical guidance, clinical reference templates, priority-based triage.
+- **Admin Dashboard:** User registration approvals/rejections, system statistics, role assignment, and oversight.
+- **Security & Database:** Password hashing (`password_hash`), role-based access control, prepared SQL statements against SQL injection, file upload validation, and normalized database architecture.
 
 ---
 
@@ -158,4 +161,5 @@ To run and preview the portfolio locally on your machine:
 
 ---
 
+⭐ *If you like this portfolio, feel free to star this repository!*
 ⭐ *If you like this portfolio, feel free to star this repository!*
