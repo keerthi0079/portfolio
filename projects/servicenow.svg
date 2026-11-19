@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sn-bezel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f3d32"/>
+      <stop offset="50%" stop-color="#0e241c"/>
+      <stop offset="100%" stop-color="#07140f"/>
+    </linearGradient>
+    <linearGradient id="sn-screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1f18"/>
+      <stop offset="50%" stop-color="#05120e"/>
+      <stop offset="100%" stop-color="#020806"/>
+    </linearGradient>
+    <linearGradient id="sn-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#62d84e"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="sn-sla" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tablet Bezel Frame -->
+  <rect x="10" y="10" width="830" height="540" rx="28" fill="url(#sn-bezel)" stroke="#62d84e" stroke-opacity="0.4" stroke-width="2"/>
+  <rect x="16" y="16" width="818" height="528" rx="24" fill="#030c08" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+  
+  <circle cx="425" cy="28" r="4" fill="#133626" stroke="#255942" stroke-width="1"/>
+  <circle cx="425" cy="28" r="1.5" fill="#62d84e"/>
+
+  <!-- Screen Content Area -->
+  <g transform="translate(32, 42)">
+    <rect width="786" height="476" rx="16" fill="url(#sn-screen)" stroke="#1a3d2e" stroke-width="1.5"/>
+
+    <!-- Top ServiceNow Banner -->
+    <rect width="786" height="42" rx="16" fill="#041f16"/>
+    <rect y="30" width="786" height="12" fill="#041f16"/>
+
+    <!-- ServiceNow Logo Mark -->
+    <circle cx="26" cy="21" r="6" fill="#62d84e"/>
+    <circle cx="26" cy="21" r="3" fill="#041f16"/>
+    <text x="38" y="26" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="800" letter-spacing="1">service<tspan fill="#62d84e">now</tspan></text>
+
+    <!-- Nav Tab -->
+    <rect x="145" y="10" width="225" height="24" rx="6" fill="#0a3324"/>
+    <text x="156" y="26" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="700">Service Operations Workspace</text>
+
+    <text x="610" y="26" fill="#62d84e" font-family="sans-serif" font-size="10.5" font-weight="700">● ITSM AUTOMATION ACTIVE</text>
+
+    <!-- Record Info Sub-Bar -->
+    <g transform="translate(0, 42)">
+      <rect width="786" height="38" fill="#082b1f" stroke-bottom="#134734"/>
+      <rect x="18" y="9" width="95" height="20" rx="4" fill="#124f39"/>
+      <text x="25" y="23" fill="#62d84e" font-family="monospace" font-size="11" font-weight="700">INC0010001</text>
+      
+      <text x="125" y="24" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Unable to connect to Corporate VPN from home office</text>
+
+      <!-- Status badges -->
+      <rect x="620" y="9" width="65" height="20" rx="4" fill="#10b981"/>
+      <text x="632" y="23" fill="#041f16" font-family="sans-serif" font-size="9" font-weight="800">RESOLVED</text>
+
+      <rect x="692" y="9" width="75" height="20" rx="4" fill="#1b4535" stroke="#62d84e" stroke-width="0.8"/>
+      <text x="702" y="23" fill="#a7f3d0" font-family="sans-serif" font-size="9" font-weight="700">L2 Support</text>
+    </g>
+
+    <!-- Workspace 3-Column Layout -->
+    <!-- Col 1: Record Details & Classification -->
+    <g transform="translate(18, 92)">
+      <rect width="240" height="365" rx="10" fill="#061a13" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="24" fill="#62d84e" font-family="sans-serif" font-size="11" font-weight="700">Service Classification &amp; CI</text>
+
+      <g transform="translate(14, 38)" font-family="sans-serif" font-size="9.5">
+        <text y="10" fill="#94a3b8">Caller:</text>
+        <text y="24" fill="#ffffff" font-weight="700">Michael Hawke (Employee)</text>
+
+        <text y="46" fill="#94a3b8">Business Service:</text>
+        <text y="60" fill="#62d84e" font-weight="700">Remote Access</text>
+
+        <text y="82" fill="#94a3b8">Service Offering:</text>
+        <text y="96" fill="#ffffff" font-weight="700">Corporate VPN</text>
+
+        <text y="118" fill="#94a3b8">Configuration Item (CI):</text>
+        <text y="132" fill="#a7f3d0" font-family="monospace">PowerGate T110-8</text>
+
+        <text y="154" fill="#94a3b8">Category / Subcategory:</text>
+        <text y="168" fill="#ffffff">Network / VPN</text>
+
+        <text y="190" fill="#94a3b8">Impact / Urgency:</text>
+        <text y="204" fill="#f59e0b" font-weight="700">2 - Medium / 2 - Medium</text>
+
+        <text y="226" fill="#94a3b8">Calculated Priority:</text>
+        <rect x="0" y="234" width="130" height="22" rx="4" fill="#1a3d2c" stroke="#f59e0b" stroke-width="1"/>
+        <text x="8" y="249" fill="#f59e0b" font-weight="800">3 - Moderate</text>
+
+        <text y="278" fill="#94a3b8">Assignment Group:</text>
+        <text y="292" fill="#ffffff" font-weight="700">Network Level 2 Support</text>
+      </g>
+    </g>
+
+    <!-- Col 2: Investigation, Agent Assist & Changes -->
+    <g transform="translate(270, 92)">
+      <!-- Top Box: Agent Assist & Knowledge Recommendation -->
+      <rect width="255" height="175" rx="10" fill="#061a13" stroke="rgba(98,216,78,0.2)"/>
+      <text x="14" y="22" fill="#62d84e" font-family="sans-serif" font-size="10.5" font-weight="700">Agent Assist &amp; Knowledge Base</text>
+
+      <g transform="translate(14, 34)">
+        <rect width="227" height="52" rx="6" fill="#0a2a1f" stroke="rgba(98,216,78,0.2)"/>
+        <text x="10" y="18" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="700">KB0010008: VPN Config for Devices</text>
+        <text x="10" y="32" fill="#a7f3d0" font-family="sans-serif" font-size="8">Solution: Certificate re-enrollment</text>
+        <rect x="10" y="37" width="75" height="11" rx="2" fill="#134734"/>
+        <text x="14" y="45" fill="#62d84e" font-family="sans-serif" font-size="7" font-weight="700">ATTACH TO INC</text>
+
+        <!-- Emergency Change Link -->
+        <g transform="translate(0, 62)">
+          <rect width="227" height="65" rx="6" fill="#17122e" stroke="#818cf8" stroke-width="0.8"/>
+          <text x="10" y="18" fill="#c084fc" font-family="sans-serif" font-size="9" font-weight="700">Linked Emergency Change</text>
+          <text x="10" y="33" fill="#ffffff" font-family="monospace" font-size="8.5">CHG0030001 (Restart Service)</text>
+          <text x="10" y="47" fill="#94a3b8" font-family="sans-serif" font-size="8">Child Incident: INC0010002 linked</text>
+        </g>
+      </g>
+
+      <!-- Bottom Box: Resolution Code & Cause -->
+      <g transform="translate(0, 185)">
+        <rect width="255" height="180" rx="10" fill="#061a13" stroke="rgba(255,255,255,0.08)"/>
+        <text x="14" y="22" fill="#34d399" font-family="sans-serif" font-size="10.5" font-weight="700">Resolution Code &amp; Knowledge Creation</text>
+
+        <g transform="translate(14, 34)" font-family="sans-serif" font-size="9">
+          <text y="10" fill="#94a3b8">Resolution Code:</text>
+          <text y="22" fill="#ffffff" font-weight="700">Solved (Work Around Provided)</text>
+
+          <text y="40" fill="#94a3b8">Probable Cause:</text>
+          <text y="52" fill="#f59e0b">Corporate login service was suspended</text>
+
+          <text y="70" fill="#94a3b8">Resolution Notes:</text>
+          <text y="82" fill="#a7f3d0">Restarted node and re-authenticated credentials</text>
+
+          <rect x="0" y="95" width="227" height="35" rx="6" fill="url(#sn-green)"/>
+          <text x="24" y="117" fill="#041f16" font-family="sans-serif" font-size="9.5" font-weight="800">✓ KNOWLEDGE ARTICLE CREATED</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Col 3: SLA Validation & Timeline -->
+    <g transform="translate(537, 92)">
+      <rect width="231" height="365" rx="10" fill="#061a13" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="24" fill="#62d84e" font-family="sans-serif" font-size="11" font-weight="700">SLA Validation &amp; Auditing</text>
+
+      <!-- Resolution SLA Gauge -->
+      <g transform="translate(14, 40)">
+        <text x="0" y="10" fill="#94a3b8" font-family="sans-serif" font-size="9">Resolution SLA (P3 - 8 Hours):</text>
+        <rect y="18" width="203" height="12" rx="6" fill="#0d2b20"/>
+        <rect y="18" width="165" height="12" rx="6" fill="url(#sn-green)"/>
+        <text x="0" y="44" fill="#62d84e" font-family="monospace" font-size="10" font-weight="700">81.2% ELAPSED // SLA MET</text>
+      </g>
+
+      <!-- Response SLA Gauge -->
+      <g transform="translate(14, 100)">
+        <text x="0" y="10" fill="#94a3b8" font-family="sans-serif" font-size="9">Response SLA (P3 - 1 Hour):</text>
+        <rect y="18" width="203" height="12" rx="6" fill="#0d2b20"/>
+        <rect y="18" width="190" height="12" rx="6" fill="#10b981"/>
+        <text x="0" y="44" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">100% ACHIEVED (12 mins)</text>
+      </g>
+
+      <!-- Activity Timeline Stream -->
+      <g transform="translate(14, 160)">
+        <text x="0" y="10" fill="#94a3b8" font-family="sans-serif" font-size="9.5" font-weight="700">Activity History Log:</text>
+        
+        <g transform="translate(0, 20)" font-family="sans-serif" font-size="8">
+          <circle cx="5" cy="5" r="3" fill="#62d84e"/>
+          <text x="14" y="8" fill="#ffffff">Incident created via Portal</text>
+          
+          <line x1="5" y1="10" x2="5" y2="28" stroke="#134734"/>
+          <circle cx="5" cy="30" r="3" fill="#818cf8"/>
+          <text x="14" y="33" fill="#ffffff">Assigned to L1 Network Support</text>
+
+          <line x1="5" y1="35" x2="5" y2="53" stroke="#134734"/>
+          <circle cx="5" cy="55" r="3" fill="#f59e0b"/>
+          <text x="14" y="58" fill="#ffffff">Escalated to Level 2 Support</text>
+
+          <line x1="5" y1="60" x2="5" y2="78" stroke="#134734"/>
+          <circle cx="5" cy="80" r="3" fill="#c084fc"/>
+          <text x="14" y="83" fill="#ffffff">Emergency Change CHG0030001</text>
+
+          <line x1="5" y1="85" x2="5" y2="103" stroke="#134734"/>
+          <circle cx="5" cy="105" r="3" fill="#62d84e"/>
+          <text x="14" y="108" fill="#62d84e" font-weight="700">Resolved &amp; KB Article Generated</text>
+        </g>
+      </g>
+
+      <rect x="14" y="315" width="203" height="34" rx="6" fill="#082b1f" stroke="#62d84e" stroke-width="1"/>
+      <text x="32" y="336" fill="#a7f3d0" font-family="sans-serif" font-size="9" font-weight="700">AUDIT LOG VALIDATED</text>
+    </g>
+
+  </g>
+</svg>

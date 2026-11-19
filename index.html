@@ -6,28 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pentapalli Keerthi | Portfolio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6.5.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Fixed Navbar -->
+    <!-- Interactive Luminous Sparks Canvas Background -->
+    <canvas id="sparks-canvas"></canvas>
+
+    <!-- Ambient Glowing Gradient Orbs -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+
+    <!-- Fixed Glass Navbar -->
     <header class="navbar">
         <nav class="container">
-            <div class="logo">PENTAPALLI KEERTHI</div>
-            <ul class="nav-links">
+            <a href="#hero" class="logo">
+                KEERTHI<span></span>
+            </a>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certificates</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#contact" class="nav-cta">
+                    <i class="fas fa-paper-plane"></i> Let's Talk
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -36,86 +56,153 @@
         <section id="hero" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1>Hi, I'm <span class="highlight">Keerthi</span></h1>
-                    <p class="role">Computer Science Undergraduate | Aspiring Software Engineer</p>
-                    <p class="summary">I specialize in IoT, Cybersecurity, and Blockchain Technology,
-                        with a strong passion for building secure, efficient, and innovative solutions
-                        that drive impactful technological advancements.</p>
+                    <div class="hero-status-pill">
+                        <span class="status-dot"></span>
+                        Available for Tech Opportunities
+                    </div>
+                    <h1>Hi, I'm <span class="highlight">Pentapalli Keerthi</span> </h1>
+                    <p class="role">
+                        <span id="role-text">ServiceNow Certified Developer (CSA &amp; CAD)</span>
+                        <span class="role-badge">• IoT, Cybersecurity &amp; Blockchain</span>
+                    </p>
+                    <p class="summary">
+                        ServiceNow Certified Developer (CSA &amp; CAD) and Computer Science Engineer specializing in ITSM automation, cloud workflows, enterprise cyber defense, and modern full-stack web applications.
+                    </p>
                     <div class="hero-btns">
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-code"></i> View Projects
                         </a>
-                        <a href="Resume.pdf" class="btn btn-hero-social resume-link" target="_blank">
-                            <i class="fas fa-download"></i> Download Resume
+                        <a href="Resume.pdf" class="btn btn-hero-social" target="_blank">
+                            <i class="fas fa-arrow-down"></i> Resume
                         </a>
-                        <a href="https://www.linkedin.com/in/pentapallikeerthi" class="btn btn-hero-social linkedin"
-                            target="_blank">
+                        <a href="https://www.linkedin.com/in/pentapallikeerthi" class="btn btn-hero-social linkedin" target="_blank">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
                     </div>
                 </div>
-                <!-- Profile Picture -->
+
+                <!-- Hero Section Portrait Frame -->
                 <div class="hero-image">
-                    <img src="profile.png" alt="Pentapalli Keerthi" class="profile-img">
+                    <div class="profile-portrait-frame">
+                        <div class="profile-portrait-inner">
+                            <img src="profile-1.png" alt="Pentapalli Keerthi" class="profile-portrait-img">
+                            <div class="profile-badge-float">
+                                <i class="fas fa-graduation-cap"></i> B.Tech CSE '27
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About Section (Dual Portrait & Creative Editorial Layout) -->
         <section id="about" class="container reveal">
-            <h2>About Me</h2>
-            <p>I am a Computer Science undergraduate specializing in IoT, Cybersecurity, and Blockchain Technology. With
-                strong interests in Artificial Intelligence, Web Development, and Problem-Solving. I am passionate about
-                leveraging technology to build secure, efficient, and innovative solutions. I aim to continuously learn,
-                apply my skills in real-world projects, and contribute to impactful technological advancements.</p>
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> Overview</span>
+                <h2 class="section-title">About Me <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Passionate learner, problem-solver, and builder driven by curiosity and clean design.</p>
+            </div>
+            
+            <div class="about-card-modern">
+                <!-- About Section Portrait Showcase -->
+                <div class="about-portrait-wrapper">
+                    <div class="about-portrait-frame">
+                        <div class="about-portrait-inner">
+                            <img src="profile-2.jpg" alt="Pentapalli Keerthi" class="about-portrait-img">
+                            <div class="about-portrait-badge">
+                                <i class="fas fa-code"></i> Keerthi 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Narrative & Stats -->
+                <div class="about-text">
+                    <h3>ServiceNow Automation & Full-Stack Engineering</h3>
+                    <p>
+                        I am a <strong>ServiceNow Certified System Administrator (CSA)</strong> and <strong>Certified Application Developer (CAD)</strong> pursuing Computer Science Engineering at MVGR College of Engineering, specializing in <strong>IoT, Cybersecurity, and Blockchain</strong>.
+                    </p>
+                    <p>
+                        Passionate about enterprise digital transformation, I build automated incident lifecycles, Service Operations Workspaces, CMDB integrations, and scalable full-stack applications. My focus bridges intelligent enterprise automation with secure software engineering to deliver measurable business velocity.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number stat-badge-text">CSA &amp; CAD</div>
+                            <div class="stat-label">ServiceNow Certified</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">83%</div>
+                            <div class="stat-label">B.Tech Aggregate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">11+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Flagship Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Technical Skills Section -->
         <section id="skills" class="container reveal">
-            <h2>Technical Skills & Tools</h2>
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-layer-group"></i> Capabilities</span>
+                <h2 class="section-title">Technical Skills & Tools <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Click any category below to expand the complete stack of technologies and frameworks.</p>
+            </div>
+
             <div class="skills-grid">
                 <!-- Category 1: Programming -->
                 <div class="skill-card-modern" onclick="showSkillDetails('programming', this)">
                     <div class="icon-circle">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Programming & Technologies <i class="fas fa-chevron-down card-arrow"></i></h3>
-                    <p>Building efficient and scalable solutions with a focus on real-world problem solving.</p>
+                    <h3>Programming & Core <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>Building efficient, scalable code with clean data structures and algorithmic foundations.</p>
                 </div>
-                <!-- Category 2: Tools -->
+                <!-- Category 2: ServiceNow & Tools -->
                 <div class="skill-card-modern" onclick="showSkillDetails('tools', this)">
                     <div class="icon-circle">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Tools & Platforms <i class="fas fa-chevron-down card-arrow"></i></h3>
-                    <p>Utilizing modern tools and platforms to support efficient and structured development.</p>
+                    <h3>ServiceNow & Dev Tools <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>ServiceNow (ITSM, Workspace, Studio), Flow Designer, CMDB, Git, GitHub, VS Code, and Cloud stacks.</p>
                 </div>
-                <!-- Category 3: Soft Skills -->
-                <div class="skill-card-modern" onclick="showSkillDetails('soft', this)">
+                <!-- Category 3: Domains & Soft Skills -->
+                <div class="skill-card-modern" onclick="showSkillDetails('domains', this)">
                     <div class="icon-circle">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-shield-halved"></i>
                     </div>
-                    <h3>Soft Skills <i class="fas fa-chevron-down card-arrow"></i></h3>
-                    <p>Bringing a collaborative mindset and clear communication to effectively contribute in team
-                        environments.</p>
+                    <h3>Domains & Soft Skills <i class="fas fa-chevron-down card-arrow"></i></h3>
+                    <p>IoT, Cybersecurity, collaborative communication, fast adaptability, and team leadership.</p>
                 </div>
             </div>
 
-            <!-- Detailed Skills Display -->
+            <!-- Detailed Skills Expandable View -->
             <div id="skills-detail-view" class="skills-detail-view">
-                <h3 id="detail-title">Category</h3>
+                <h3 id="detail-title">Technologies</h3>
                 <ul id="detail-tags" class="skill-tags"></ul>
             </div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="container reveal">
-            <h2>Experience</h2>
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Career Journey</span>
+                <h2 class="section-title">Work Experience <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Hands-on industry training and enterprise application development.</p>
+            </div>
+
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="exp-header">
                         <div class="exp-role-company">
-                            <span class="exp-badge">Virtual Internship</span>
+                            <span class="exp-badge"><i class="fas fa-check-circle"></i> Virtual Internship</span>
                             <h3>Web Development Intern</h3>
                             <h4 class="company-name"><i class="fas fa-building"></i> Netmaxin Group <span class="exp-type">(Remote)</span></h4>
                         </div>
@@ -125,24 +212,21 @@
                         </div>
                     </div>
                     <ul class="exp-bullets">
-                        <li>Developed responsive, modern web applications using <strong>HTML5, CSS3, and JavaScript (ES6)</strong> aligned with professional project requirements.</li>
-                        <li>Built and refined reusable UI components with a strong focus on responsive layouts, CSS Flexbox & Grid, and user-centric design principles.</li>
-                        <li>Mastered and implemented core modules: <strong>HTML5 & CSS3 Development, Responsive Web Design, JavaScript Fundamentals, Bootstrap & UI Components, Git & Version Control, API Integration Basics, and Performance Optimization</strong>.</li>
-                        <li>Assisted in comprehensive application testing, cross-browser debugging, and timely delivery of assigned development tasks.</li>
-                        <li><strong>Final Live Project:</strong> Architected, built, and deployed <strong>Infinity Business Solutions</strong> — a complete corporate business portal featuring dynamic service inquiry modals, scroll reveal animations, and interactive client workflows.</li>
+                        <li>Developed responsive, accessible web interfaces utilizing <strong>HTML5, CSS3, and modern JavaScript (ES6)</strong> aligned with professional industry standards.</li>
+                        <li>Crafted modular, reusable UI components using CSS Grid and Flexbox for seamless cross-browser responsiveness.</li>
+                        <li>Gained practical mastery in <strong>Responsive Web Design, Component Architecture, Git Version Control, API Integrations, and UX Optimization</strong>.</li>
+                        <li><strong>Capstone Project:</strong> Architected, developed, and deployed <strong>Infinity Business Solutions</strong> — an enterprise corporate portal featuring interactive service inquiry modals and smooth scroll animations.</li>
                     </ul>
                     <div class="exp-footer">
-                        <div class="tools">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript (ES6)</span>
-                            <span>Responsive Design</span>
-                            <span>UI/UX</span>
-                            <span>Bootstrap</span>
-                            <span>Git & GitHub</span>
-                            <span>Performance Optimization</span>
+                        <div class="proj-tech-row">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript (ES6)</span>
+                            <span class="tech-pill">CSS Grid & Flexbox</span>
+                            <span class="tech-pill">UI/UX</span>
+                            <span class="tech-pill">Git</span>
                         </div>
-                        <a href="proofs/netmaxin_internship.jpg" target="_blank" class="btn btn-outline-cert">
+                        <a href="proofs/netmaxin_internship.jpg" target="_blank" class="btn-outline-cert">
                             <i class="fas fa-external-link-alt"></i> View Certificate
                         </a>
                     </div>
@@ -150,380 +234,649 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects Section (Ordered Exactly As Requested with Realistic Device Mockup Frames) -->
         <section id="projects" class="container reveal">
-            <h2>Projects</h2>
-            <div class="projects-grid">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-laptop-code"></i> Portfolio</span>
+                <h2 class="section-title">Featured Projects <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Concise case studies showcasing full-stack engineering, cybersecurity AI, and community web systems.</p>
+            </div>
 
-                <!-- Featured Project: Infinity Business Solutions (Netmaxin Internship Final Live Project) -->
-                <article class="project-card featured-project">
-                    <span class="project-badge"><i class="fas fa-award"></i> Netmaxin Internship • Final Live Project</span>
-                    <h3>Infinity Business Solutions</h3>
-                    <p><strong>Project Overview:</strong> A modern, fully responsive corporate business website designed and developed using HTML5, CSS3, and JavaScript as the final capstone project for the Netmaxin Web Development Virtual Internship. The website showcases professional enterprise services, company overview, and an interactive contact experience for potential clients.</p>
-                    
-                    <div class="project-feature-grid">
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-home"></i> Home & About</h4>
-                            <ul>
-                                <li>Modern corporate hero banner with branding</li>
-                                <li>Interactive service showcase & smooth navigation</li>
-                                <li>Company background, mission, vision & values</li>
-                            </ul>
+            <div class="projects-stack">
+
+                <!-- 1. AI-SOC (Sentriq Autonomous AI Security Operations Center) -->
+                <article class="project-card-modern theme-cyber">
+                    <!-- Left Showcase Column: Device Mockup Frame -->
+                    <div class="project-showcase-visual">
+                        <div class="device-mockup-wrapper">
+                            <img src="projects/ai-soc.jpg" alt="Sentriq AI-SOC Security Operations Dashboard" class="device-mockup-img">
                         </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-cogs"></i> Services & Modal Inquiry</h4>
-                            <ul>
-                                <li>15+ business services (Web, Cloud, AI, Security)</li>
-                                <li>Interactive service cards with hover animations</li>
-                                <li>Service Request popup modal for instant inquiries</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-mobile-alt"></i> Responsive & UX</h4>
-                            <ul>
-                                <li>Mobile-first design with responsive drawer toggle</li>
-                                <li>Full tablet and desktop layout optimization</li>
-                                <li>CSS Grid & Flexbox structured layouts</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-bolt"></i> JavaScript Interactions</h4>
-                            <ul>
-                                <li>Dynamic service text animation</li>
-                                <li>Scroll reveal effects & back-to-top button</li>
-                                <li>Interactive contact form & validation</li>
-                            </ul>
+                        <div class="proj-visual-footer">
+                            <div class="proj-badge-row">
+                                <span class="proj-category-pill">Enterprise AI Cybersecurity</span>
+                            </div>
+                            <h3 class="proj-title">Sentriq: Autonomous AI-SOC</h3>
+                            <p class="proj-tagline">Autonomous, explainable AI-powered SOC for telemetry analysis & attack containment.</p>
                         </div>
                     </div>
 
-                    <div class="tools">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript (ES6)</span>
-                        <span>Flexbox</span>
-                        <span>CSS Grid</span>
-                        <span>Responsive Layouts</span>
-                        <span>CSS Animations</span>
-                        <span>Font Awesome</span>
-                    </div>
+                    <!-- Right Structured Summary Column -->
+                    <div class="project-showcase-content">
+                        <div class="proj-detail-blocks">
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-circle-dot"></i> The Problem & Objective</span>
+                                <p class="proj-summary-text">
+                                    Security analysts face extreme alert fatigue with high false alarms. Sentriq ingests high-volume network telemetry, classifies multi-stage cyberattacks, and mathematically explains verdicts via XAI.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-sparkles"></i> Key Highlights</span>
+                                <ul class="proj-bullet-list">
+                                    <li><strong>Dual ML Ensemble & XAI:</strong> 96.67% binary accuracy with Random Forest and SHAP TreeExplainer for decision transparency.</li>
+                                    <li><strong>93.3% Alert Noise Reduction:</strong> 15-minute sliding-window temporal correlation uniting isolated alerts into unified attack stories.</li>
+                                    <li><strong>Real-Time SOC Console:</strong> Built with React 18, Vite & Tailwind CSS with live WebSocket telemetry and Human-in-the-Loop containment.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                    <div class="project-actions">
-                        <a href="https://keerthi.netmaxin.in/" target="_blank" class="btn btn-project-primary">
-                            <i class="fas fa-globe"></i> View Live Website (keerthi.netmaxin.in)
-                        </a>
-                        <a href="proofs/netmaxin_internship.jpg" target="_blank" class="btn btn-project-secondary">
-                            <i class="fas fa-certificate"></i> View Internship Certificate
-                        </a>
+                        <div>
+                            <div class="proj-tech-row" style="margin-bottom: 1.2rem;">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">React 18</span>
+                                <span class="tech-pill">TypeScript</span>
+                                <span class="tech-pill">Random Forest</span>
+                                <span class="tech-pill">SHAP (XAI)</span>
+                            </div>
+
+                            <div class="proj-actions-row">
+                                <a href="https://github.com/keerthi0079/Sentriq-AI-SOC" target="_blank" class="btn-proj-primary" style="background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);">
+                                    <i class="fab fa-github"></i> View GitHub Repo ↗
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Project 2: Sentriq AI-SOC -->
-                <article class="project-card featured-project">
-                    <span class="project-badge"><i class="fas fa-shield-alt"></i> Enterprise AI Cybersecurity • Major Project</span>
-                    <h3>Sentriq: Autonomous AI Security Operations Center (AI-SOC)</h3>
-                    <p><strong>Project Overview:</strong> An autonomous, explainable AI-powered Security Operations Center engineered to ingest high-volume network telemetry (UNSW-NB15 & CIC-IDS2017), classify multi-stage cyberattacks using Random Forest ensembles (96.67% accuracy), mathematically explain verdicts via SHAP TreeExplainer, eliminate 93.3% alert noise using sliding-window temporal correlation, calculate deterministic 4-factor risk scores, and orchestrate Human-in-the-Loop (HITL) incident containment.</p>
-                    
-                    <div class="project-feature-grid">
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-desktop"></i> Real-Time SOC Console</h4>
-                            <ul>
-                                <li>React 18, TypeScript, Vite & Tailwind CSS dashboard</li>
-                                <li>Live telemetry streamer & WebSocket hub integration</li>
-                                <li>Dynamic severity & attack distribution charts (Recharts)</li>
-                                <li>Incident logs with status filters (Open, Investigating, Resolved)</li>
-                            </ul>
+                <!-- 2. E-Swasthya (Village Health Connect) -->
+                <article class="project-card-modern theme-health">
+                    <!-- Left Showcase Column: Device Mockup Frame -->
+                    <div class="project-showcase-visual">
+                        <div class="device-mockup-wrapper">
+                            <img src="projects/e-swasthya.svg" alt="E-Swasthya Telemedicine Mockup" class="device-mockup-img">
                         </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-brain"></i> Dual ML Classifiers & XAI</h4>
-                            <ul>
-                                <li>Dual Random Forest ensemble (Binary + 6-Class categorizer)</li>
-                                <li>96.67% binary accuracy, 0.9669 F1-score & 0.0% False Positive Rate</li>
-                                <li>SHAP TreeExplainer feature attributions for forensic audits</li>
-                                <li>Rule-to-XAI consensus bridge verifying security heuristics</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-chart-line"></i> Correlation & 4-Factor Risk</h4>
-                            <ul>
-                                <li>15-minute sliding-window temporal alert correlation</li>
-                                <li>93.3% alert noise reduction, grouping unified attack stories</li>
-                                <li>Deterministic 4-Factor Risk: Severity, Conf, Asset, Impact</li>
-                                <li>Automated blast radius calculation across enterprise subnets</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-user-shield"></i> Multi-Agent & Containment</h4>
-                            <ul>
-                                <li>Triage, Correlation, Response & Reporting agents</li>
-                                <li>MITRE ATT&CK technique mapping (e.g., T1110, T1059)</li>
-                                <li>Human-in-the-Loop (HITL) containment for firewall drops</li>
-                                <li>Immutable response audit log & automated dossier reports</li>
-                            </ul>
+                        <div class="proj-visual-footer">
+                            <div class="proj-badge-row">
+                                <span class="proj-category-pill">Community Healthcare Platform</span>
+                            </div>
+                            <h3 class="proj-title">Village Health Connect (E-Swasthya)</h3>
+                            <p class="proj-tagline">Multi-tier healthcare platform connecting rural patients with ANMS & doctors.</p>
                         </div>
                     </div>
 
-                    <div class="tools">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>React 18</span>
-                        <span>TypeScript</span>
-                        <span>Tailwind CSS</span>
-                        <span>PostgreSQL</span>
-                        <span>SQLAlchemy</span>
-                        <span>Random Forest</span>
-                        <span>Scikit-Learn</span>
-                        <span>SHAP (XAI)</span>
-                        <span>Recharts</span>
-                        <span>Docker</span>
-                        <span>MITRE ATT&CK</span>
-                    </div>
+                    <!-- Right Structured Summary Column -->
+                    <div class="project-showcase-content">
+                        <div class="proj-detail-blocks">
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-circle-dot"></i> The Overview</span>
+                                <p class="proj-summary-text">
+                                    A production-grade telemedicine management platform engineered to connect rural villagers, Auxiliary Nurse Midwives (ANMS), and doctors in an end-to-end triage and consultation workflow.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-sparkles"></i> Key Highlights</span>
+                                <ul class="proj-bullet-list">
+                                    <li><strong>Three-Tier Role Management:</strong> Dedicated portals for Villagers (photo issue reporting), ANMS (area claim triage), and Doctors (clinical guidance).</li>
+                                    <li><strong>Secure Architecture:</strong> Hardened PHP backend featuring SQL prepared statements, password hashing, and CSRF protection.</li>
+                                    <li><strong>Emergency Triage:</strong> Area-wise patient claiming, urgent prioritization, and instant click-to-call direct contact support.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                    <div class="project-actions">
-                        <a href="https://github.com/keerthi0079/Sentriq-AI-SOC" target="_blank" class="btn btn-project-primary">
-                            <i class="fab fa-github"></i> View GitHub Repository (Sentriq-AI-SOC)
-                        </a>
+                        <div>
+                            <div class="proj-tech-row" style="margin-bottom: 1.2rem;">
+                                <span class="tech-pill">PHP</span>
+                                <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Bootstrap 5</span>
+                                <span class="tech-pill">RBAC Security</span>
+                                <span class="tech-pill">XAMPP</span>
+                            </div>
+
+                            <div class="proj-actions-row">
+                                <a href="https://github.com/keerthi0079/E-Swasthya-Connect" target="_blank" class="btn-proj-primary" style="background: linear-gradient(135deg, #34d399 0%, #059669 100%);">
+                                    <i class="fab fa-github"></i> View GitHub Repo ↗
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Project 3: Village Health Connect (E-Swasthya Connect) -->
-                <article class="project-card featured-project">
-                    <span class="project-badge"><i class="fas fa-heartbeat"></i> Community Healthcare Platform • Production Ready</span>
-                    <h3>Village Health Connect (E-Swasthya Connect)</h3>
-                    <p><strong>Project Overview:</strong> A comprehensive, production-ready healthcare management platform designed for community service. The system connects rural villagers, Auxiliary Nurse Midwives (ANMS), and certified doctors, providing an end-to-end workflow from problem reporting with photo uploads to medical guidance and case resolution.</p>
-                    
-                    <div class="project-feature-grid">
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-user-injured"></i> Villager Dashboard</h4>
-                            <ul>
-                                <li>Report medical problems with photo upload & details</li>
-                                <li>Real-time status tracking & incident progress history</li>
-                                <li>User-specific alerts & emergency contact quick access</li>
-                            </ul>
+                <!-- 3. Incident Lifecycle Automation in ServiceNow -->
+                <article class="project-card-modern theme-servicenow">
+                    <!-- Left Showcase Column: Device Mockup Frame -->
+                    <div class="project-showcase-visual">
+                        <div class="device-mockup-wrapper">
+                            <img src="projects/servicenow.svg" alt="ServiceNow Incident Automation Mockup" class="device-mockup-img">
                         </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-user-nurse"></i> ANMS Member Dashboard</h4>
-                            <ul>
-                                <li>"Assign to Me" claims unassigned area cases</li>
-                                <li>"Update Status" tracks local care progress</li>
-                                <li>"Escalate to Doctor" & click-to-call villagers</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-user-md"></i> Doctor Dashboard</h4>
-                            <ul>
-                                <li>"Respond to Case" provides clinical guidance</li>
-                                <li>Medical reference guides & response templates</li>
-                                <li>Priority-based sorting for urgent patient cases</li>
-                            </ul>
-                        </div>
-                        <div class="project-feature-box">
-                            <h4><i class="fas fa-shield-alt"></i> Admin & Security</h4>
-                            <ul>
-                                <li>Role approval/rejection & user verification</li>
-                                <li>Password hashing (PHP password_hash) & CSRF safety</li>
-                                <li>Prepared SQL statements against SQL injection</li>
-                            </ul>
+                        <div class="proj-visual-footer">
+                            <div class="proj-badge-row">
+                                <span class="proj-category-pill">ServiceNow ITSM Automation</span>
+                            </div>
+                            <h3 class="proj-title">ServiceNow Incident Automation</h3>
+                            <p class="proj-tagline">Enterprise ITSM incident automation, change linkage, SLA tracking & knowledge capture.</p>
                         </div>
                     </div>
 
-                    <div class="tools">
-                        <span>PHP (20+ Functional Pages)</span>
-                        <span>MySQL (Normalized Schema)</span>
-                        <span>JavaScript</span>
-                        <span>Bootstrap 5</span>
-                        <span>HTML5 & CSS3</span>
-                        <span>Role-Based Access Control</span>
-                        <span>XAMPP</span>
-                        <span>Prepared Statements</span>
+                    <!-- Right Structured Summary Column -->
+                    <div class="project-showcase-content">
+                        <div class="proj-detail-blocks">
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-circle-dot"></i> The Problem & Objective</span>
+                                <p class="proj-summary-text">
+                                    Enterprise IT services face critical outages where uncoordinated escalations breach SLAs. This project automates end-to-end incident management within ServiceNow Service Operations Workspace.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-sparkles"></i> Key Highlights</span>
+                                <ul class="proj-bullet-list">
+                                    <li><strong>End-to-End Lifecycle:</strong> Structured progression across New, In Progress, and Resolved states with automated CMDB CI linkage.</li>
+                                    <li><strong>L2 Escalation & Change:</strong> Dynamic Level 2 Support routing, child incident correlation, and emergency change (CHG) creation.</li>
+                                    <li><strong>SLA Engine & Knowledge:</strong> Real-time P1 Resolution SLA clock monitoring and 1-click automated Knowledge Base (KB) generation.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="proj-tech-row" style="margin-bottom: 1.2rem;">
+                                <span class="tech-pill">ServiceNow</span>
+                                <span class="tech-pill">ITSM</span>
+                                <span class="tech-pill">Flow Designer</span>
+                                <span class="tech-pill">Workspace</span>
+                                <span class="tech-pill">CMDB & CSDM</span>
+                                <span class="tech-pill">SLA Engine</span>
+                            </div>
+
+                            <div class="proj-actions-row">
+                                <a href="https://github.com/keerthi0079/servicenow-incident-automation" target="_blank" class="btn-proj-primary" style="background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);">
+                                    <i class="fab fa-github"></i> View GitHub Repo ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Infinity Business Solutions -->
+                <article class="project-card-modern theme-web">
+                    <!-- Left Showcase Column: Device Mockup Frame -->
+                    <div class="project-showcase-visual">
+                        <div class="device-mockup-wrapper">
+                            <img src="projects/infinity.svg" alt="Infinity Business Solutions Mockup" class="device-mockup-img">
+                        </div>
+                        <div class="proj-visual-footer">
+                            <div class="proj-badge-row">
+                                <span class="proj-category-pill">Netmaxin • Capstone Project</span>
+                            </div>
+                            <h3 class="proj-title">Infinity Business Solutions</h3>
+                            <p class="proj-tagline">Corporate business portal with dynamic service inquiries & interactive workflows.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Structured Summary Column -->
+                    <div class="project-showcase-content">
+                        <div class="proj-detail-blocks">
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-circle-dot"></i> The Overview</span>
+                                <p class="proj-summary-text">
+                                    Architected and developed a modern corporate portal as the capstone project for Netmaxin Group, featuring enterprise service showcases, interactive inquiry modals, and mobile-first UX.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-sparkles"></i> Key Highlights</span>
+                                <ul class="proj-bullet-list">
+                                    <li><strong>Interactive Inquiries:</strong> Dynamic popup modals for direct client service requests across 15+ corporate categories.</li>
+                                    <li><strong>Responsive Layout:</strong> Built with CSS Grid and Flexbox for fluid desktop, tablet, and mobile viewing.</li>
+                                    <li><strong>Clean Architecture:</strong> Built with pure vanilla ES6 JavaScript, HTML5, and CSS3 for high performance.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="proj-tech-row" style="margin-bottom: 1.2rem;">
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript ES6</span>
+                                <span class="tech-pill">CSS Flexbox</span>
+                                <span class="tech-pill">CSS Grid</span>
+                                <span class="tech-pill">Responsive Design</span>
+                            </div>
+
+                            <div class="proj-actions-row">
+                                <a href="https://github.com/keerthi0079/Infinity-Business-Solutions/tree/main" target="_blank" class="btn-proj-primary">
+                                    <i class="fab fa-github"></i> View GitHub Repo ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. My Portfolio (Personal Creative Portfolio & Interactive Showcase) -->
+                <article class="project-card-modern theme-portfolio">
+                    <!-- Left Showcase Column: Device Mockup Frame -->
+                    <div class="project-showcase-visual">
+                        <div class="device-mockup-wrapper">
+                            <img src="projects/portfolio.svg" alt="Interactive Portfolio Mockup" class="device-mockup-img">
+                        </div>
+                        <div class="proj-visual-footer">
+                            <div class="proj-badge-row">
+                                <span class="proj-category-pill">Personal Showcase • Live Web</span>
+                            </div>
+                            <h3 class="proj-title">Interactive Digital Portfolio</h3>
+                            <p class="proj-tagline">Modern creative developer portfolio with interactive particle sparks & glassmorphism.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Structured Summary Column -->
+                    <div class="project-showcase-content">
+                        <div class="proj-detail-blocks">
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-circle-dot"></i> The Overview</span>
+                                <p class="proj-summary-text">
+                                    Engineered a high-performance developer portfolio featuring an interactive particle spark canvas, glassmorphic UI architecture, continuous certificate carousel, and lightbox preview.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="proj-micro-label"><i class="fas fa-sparkles"></i> Key Highlights</span>
+                                <ul class="proj-bullet-list">
+                                    <li><strong>Canvas Sparks Engine:</strong> Custom 60fps particle stardust simulation with interactive mouse proximity physics.</li>
+                                    <li><strong>Split Device Architecture:</strong> Realistic device preview mockups displaying software UI with responsive layout.</li>
+                                    <li><strong>Zero External UI Libraries:</strong> Handcrafted in vanilla JavaScript, CSS3, and HTML5 for ultra-fast load times.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="proj-tech-row" style="margin-bottom: 1.2rem;">
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript ES6</span>
+                                <span class="tech-pill">Canvas API</span>
+                                <span class="tech-pill">Glassmorphism</span>
+                                <span class="tech-pill">Responsive UI/UX</span>
+                            </div>
+
+                            <div class="proj-actions-row">
+                                <a href="https://keerthi.netmaxin.in/" target="_blank" class="btn-proj-primary" style="background: linear-gradient(135deg, #c084fc 0%, #818cf8 100%);">
+                                    <i class="fas fa-globe"></i> View Live Website ↗
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="container reveal">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Bachelor of Technology in Computer Science and Engineering - (83%)</h3>
-                    <p class="uni-name">MVGR College of Engineering, Vizianagaram | 2023 - 2027</p>
-                    <p>Specialization: Internet of Things, Cybersecurity & Blockchain Technology</p>
-                </div>
-                <div class="education-card">
-                    <h3>Intermediate Education - (91%)</h3>
-                    <p class="uni-name">Sri Chaitanya Junior College, Vizianagaram | 2021 - 2023</p>
-                    <p>Focus on Mathematics, Physics, and Chemistry</p>
-                </div>
-                <div class="education-card">
-                    <h3>Secondary Education - (100%)</h3>
-                    <p class="uni-name">Gurajada School, Vizianagaram | 2020 - 2021</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Internship & Certifications -->
+        <!-- Internships & Certifications Section -->
         <section id="certifications" class="container reveal">
-            <h2>Internships & Certifications</h2>
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-award"></i> Verified Honors</span>
+                <h2 class="section-title">Internships & Certifications <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Click any certificate card to preview in high-definition or filter by credential category.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="cert-filters">
+                <button class="cert-filter-btn active" data-filter="all">All (11)</button>
+                <button class="cert-filter-btn" data-filter="cloud">ServiceNow & Cloud</button>
+                <button class="cert-filter-btn" data-filter="internship">Internships</button>
+                <button class="cert-filter-btn" data-filter="hackathon">Hackathons & Workshops</button>
+            </div>
+
+            <!-- Carousel Wrapper -->
             <div class="certifications-wrapper">
                 <button class="scroll-btn left" id="cert-scroll-left" aria-label="Scroll Left">
                     <i class="fas fa-chevron-left"></i>
                 </button>
+
                 <div class="certifications-scroll" id="cert-scroll-container">
-                    <a href="proofs/netmaxin_internship.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/netmaxin_internship.jpg" alt="Netmaxin Web Development Virtual Internship">
+                    
+                    <!-- 1. Netmaxin Web Dev Internship -->
+                    <div class="cert-item" data-category="internship">
+                        <div class="cert-card" onclick="openCertModal('proofs/netmaxin_internship.jpg', 'Web Development Virtual Internship', 'Netmaxin Group | May – July 2026', 'Internship')">
+                            <div class="cert-image-box">
+                                <img src="proofs/netmaxin_internship.jpg" alt="Netmaxin Web Development Internship" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Web Development Internship</h3>
-                                <p>Netmaxin Group | May - Jul 2026</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-building"></i> Netmaxin Group</span>
+                                    <h3>Web Dev Virtual Internship</h3>
+                                </div>
+                                <p>May 2026 – July 2026</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/ServiceNow_CSA.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/ServiceNow_CSA.jpg" alt="ServiceNow CSA">
+                    </div>
+
+                    <!-- 2. ServiceNow CSA -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/ServiceNow_CSA.jpg', 'ServiceNow Certified System Administrator (CSA)', 'ServiceNow Global Credential', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/ServiceNow_CSA.jpg" alt="ServiceNow CSA" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>ServiceNow CSA</h3>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-shield-alt"></i> ServiceNow</span>
+                                    <h3>ServiceNow CSA</h3>
+                                </div>
                                 <p>Certified System Administrator</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/ServiceNow_CAD.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/ServiceNow_CAD.jpg" alt="ServiceNow CAD">
+                    </div>
+
+                    <!-- 3. ServiceNow CAD -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/ServiceNow_CAD.jpg', 'ServiceNow Certified Application Developer (CAD)', 'ServiceNow Global Credential', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/ServiceNow_CAD.jpg" alt="ServiceNow CAD" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>ServiceNow CAD</h3>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-code"></i> ServiceNow</span>
+                                    <h3>ServiceNow CAD</h3>
+                                </div>
                                 <p>Certified Application Developer</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/salesforce_developer.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/salesforce_developer.jpg" alt="Salesforce Developer">
+                    </div>
+
+                    <!-- 4. Salesforce Developer -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/salesforce_developer.jpg', 'Salesforce Developer Certification', 'Agentblazer Champion Track', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/salesforce_developer.jpg" alt="Salesforce Developer" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Salesforce Developer</h3>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-cloud"></i> Salesforce</span>
+                                    <h3>Salesforce Developer</h3>
+                                </div>
                                 <p>Agentblazer Champion Track</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/Micro-Certification - Welcome to ServiceNow.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/Micro-Certification - Welcome to ServiceNow.jpg"
-                                alt="Micro-Certification - Welcome to ServiceNow">
+                    </div>
+
+                    <!-- 5. Micro-Certification - Welcome to ServiceNow -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/Micro-Certification - Welcome to ServiceNow.jpg', 'Micro-Certification: Welcome to ServiceNow', 'ServiceNow Professional Development', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/Micro-Certification - Welcome to ServiceNow.jpg" alt="Welcome to ServiceNow" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Micro-Certification - Welcome to ServiceNow</h3>
-                                <p>ServiceNow</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-certificate"></i> ServiceNow</span>
+                                    <h3>Welcome to ServiceNow</h3>
+                                </div>
+                                <p>ServiceNow Micro-Certification</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/data_engineering_internship.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/data_engineering_internship.jpg" alt="Data Engineering Internship">
+                    </div>
+
+                    <!-- 6. Data Engineering Virtual Internship -->
+                    <div class="cert-item" data-category="internship">
+                        <div class="cert-card" onclick="openCertModal('proofs/data_engineering_internship.jpg', 'Data Engineering Virtual Internship', 'AWS / Forage Simulation', 'Internship')">
+                            <div class="cert-image-box">
+                                <img src="proofs/data_engineering_internship.jpg" alt="Data Engineering Internship" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Data Engineering Virtual Internship</h3>
-                                <p>AWS / Forage</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-database"></i> AWS / Forage</span>
+                                    <h3>Data Engineering Internship</h3>
+                                </div>
+                                <p>Cloud Data Pipelines & Analytics</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/cyber_security_workshop.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/cyber_security_workshop.jpg" alt="Cyber Security Workshop">
+                    </div>
+
+                    <!-- 7. Cyber Security Workshop & Quiz Winner -->
+                    <div class="cert-item" data-category="hackathon">
+                        <div class="cert-card" onclick="openCertModal('proofs/cyber_security_workshop.jpg', 'Cyber Security Workshop & Quiz Winner', 'CyberThreya | 1st Prize Winner', 'Hackathons & Workshops')">
+                            <div class="cert-image-box">
+                                <img src="proofs/cyber_security_workshop.jpg" alt="Cyber Security Workshop" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Cyber Security Workshop & Quiz Winner</h3>
-                                <p>CyberThreya | 2-Day Workshop + 1st Prize</p>
+                                <div>
+                                    <span class="cert-badge-tag" style="color: #fbbf24;"><i class="fas fa-trophy"></i> 1st Prize Winner</span>
+                                    <h3>Cyber Security Workshop</h3>
+                                </div>
+                                <p>CyberThreya | 2-Day Intensive</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/aws_data_engineering.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/aws_data_engineering.jpg" alt="AWS Data Engineering">
+                    </div>
+
+                    <!-- 8. AWS Academy - Data Engineering -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/aws_data_engineering.jpg', 'AWS Academy - Data Engineering', 'AWS Cloud Foundations', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/aws_data_engineering.jpg" alt="AWS Data Engineering" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>AWS Academy - Data Engineering</h3>
-                                <p>Cloud Engineering Foundations</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fab fa-aws"></i> AWS Academy</span>
+                                    <h3>AWS Data Engineering</h3>
+                                </div>
+                                <p>Cloud Infrastructure & Pipelines</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/aws_ml_foundations.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/aws_ml_foundations.jpg" alt="AWS Machine Learning">
+                    </div>
+
+                    <!-- 9. AWS Academy - Machine Learning Foundations -->
+                    <div class="cert-item" data-category="cloud">
+                        <div class="cert-card" onclick="openCertModal('proofs/aws_ml_foundations.jpg', 'AWS Academy - Machine Learning Foundations', 'AWS Academy Machine Learning Track', 'ServiceNow & Cloud')">
+                            <div class="cert-image-box">
+                                <img src="proofs/aws_ml_foundations.jpg" alt="AWS Machine Learning" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>AWS Academy - Machine Learning</h3>
-                                <p>Machine Learning Foundations</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fab fa-aws"></i> AWS Academy</span>
+                                    <h3>AWS Machine Learning</h3>
+                                </div>
+                                <p>ML Foundations & Algorithms</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/Sankalp certificate.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/Sankalp certificate.jpg" alt="Sankalp Hackathon">
+                    </div>
+
+                    <!-- 10. Sankalp Hackathon -->
+                    <div class="cert-item" data-category="hackathon">
+                        <div class="cert-card" onclick="openCertModal('proofs/Sankalp certificate.jpg', 'Sankalp Hackathon Certificate', 'Recognition for Innovation & Dedication', 'Hackathons & Workshops')">
+                            <div class="cert-image-box">
+                                <img src="proofs/Sankalp certificate.jpg" alt="Sankalp Hackathon" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Sankalp Hackathon</h3>
-                                <p>Recognition for Dedication and Commitment</p>
+                                <div>
+                                    <span class="cert-badge-tag" style="color: #c084fc;"><i class="fas fa-lightbulb"></i> Hackathon</span>
+                                    <h3>Sankalp Hackathon</h3>
+                                </div>
+                                <p>Innovation & Active Dedication</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="proofs/Qubitech.jpg" target="_blank" class="cert-link">
-                        <div class="cert-card">
-                            <img src="proofs/Qubitech.jpg" alt="Qubitech Certification">
+                    </div>
+
+                    <!-- 11. Qubitech Certification -->
+                    <div class="cert-item" data-category="hackathon">
+                        <div class="cert-card" onclick="openCertModal('proofs/Qubitech.jpg', 'Qubitech Advanced Technology Training', 'Emerging Tech & Hands-on Training', 'Hackathons & Workshops')">
+                            <div class="cert-image-box">
+                                <img src="proofs/Qubitech.jpg" alt="Qubitech Certification" loading="lazy">
+                                <div class="cert-hover-overlay">
+                                    <span class="cert-preview-pill"><i class="fas fa-expand"></i> Preview</span>
+                                </div>
+                            </div>
                             <div class="cert-info">
-                                <h3>Qubitech Certification</h3>
-                                <p>Advanced Technology Training</p>
+                                <div>
+                                    <span class="cert-badge-tag"><i class="fas fa-microchip"></i> Technology</span>
+                                    <h3>Qubitech Certification</h3>
+                                </div>
+                                <p>Advanced Tech Training</p>
                             </div>
                         </div>
-                    </a>
+                    </div>
+
                 </div>
+
                 <button class="scroll-btn right" id="cert-scroll-right" aria-label="Scroll Right">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="container reveal">
-            <h2>Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+919951973548" style="color: inherit; text-decoration: none;">+91 9951973548</a>
+        <!-- Certificate Lightbox Modal -->
+        <div class="cert-modal-backdrop" id="cert-modal" onclick="closeCertModal(event)">
+            <div class="cert-modal-dialog" onclick="event.stopPropagation()">
+                <button class="cert-modal-close" onclick="closeCertModalDirect()" aria-label="Close Preview">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="cert-modal-img-wrap">
+                    <img id="modal-cert-img" src="" alt="Certificate Preview">
+                </div>
+                <div class="cert-modal-content">
+                    <div class="cert-modal-details">
+                        <span id="modal-cert-badge" class="cert-badge-tag">Credential</span>
+                        <h3 id="modal-cert-title">Certificate Title</h3>
+                        <p id="modal-cert-issuer">Issuer & Details</p>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:pentapallikeerthi@gmail.com" style="color: inherit; text-decoration: none;">pentapallikeerthi@gmail.com</a>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/pentapallikeerthi" class="social-box linkedin"
-                            target="_blank">
-                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/keerthi0079" class="social-box github" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://www.instagram.com/__keerthiii__09/" class="social-box instagram"
-                            target="_blank">
-                            <i class="fab fa-instagram"></i> Instagram
+                    <div class="cert-modal-actions">
+                        <a id="modal-cert-download" href="#" target="_blank" class="btn btn-primary" style="padding: 0.65rem 1.3rem; font-size: 0.88rem;">
+                            <i class="fas fa-external-link-alt"></i> Open Full Size
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <!-- Education Section -->
+        <section id="education" class="container reveal">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academics</span>
+                <h2 class="section-title">Education <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Academic excellence and strong foundations in computer science.</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <span class="edu-badge">83% Aggregate</span>
+                    <div>
+                        <h3>B.Tech in Computer Science & Engineering</h3>
+                        <p class="uni-name">MVGR College of Engineering | 2023 – 2027</p>
+                    </div>
+                    <p>Specialization in Internet of Things, Cybersecurity & Blockchain Technology.</p>
+                </div>
+                <div class="education-card">
+                    <span class="edu-badge" style="color: #818cf8; border-color: rgba(129, 140, 248, 0.4); background: rgba(129, 140, 248, 0.18);">91% Score</span>
+                    <div>
+                        <h3>Intermediate (Class XII)</h3>
+                        <p class="uni-name">Sri Chaitanya Junior College | 2021 – 2023</p>
+                    </div>
+                    <p>Focus on Mathematics, Physics, and Chemistry (MPC Stream).</p>
+                </div>
+                <div class="education-card">
+                    <span class="edu-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.18);">100% Score</span>
+                    <div>
+                        <h3>Secondary School (Class X)</h3>
+                        <p class="uni-name">Gurajada School, Vizianagaram | 2020 – 2021</p>
+                    </div>
+                    <p>Completed with perfect academic standing and distinction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container reveal">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Let's Connect</span>
+                <h2 class="section-title">Get In Touch <span class="title-sparkle">✦</span></h2>
+                <p class="section-desc">Have a question or interested in working together? Drop me a message below.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-info-header">
+                        <h3>Let's build something remarkable.</h3>
+                        <p>I'm always open to discussing web engineering, security audits, internship opportunities, and exciting tech projects.</p>
+                    </div>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919951973548">+91 9951973548</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pentapallikeerthi@gmail.com">pentapallikeerthi@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/pentapallikeerthi" class="social-box linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/keerthi0079" class="social-box github" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.instagram.com/__keerthiii__09/" class="social-box instagram" target="_blank">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
                 <form id="contact-form" action="https://formsubmit.co/pentapallikeerthi@gmail.com" method="POST" class="contact-form">
-                    <!-- FormSubmit Configuration -->
                     <input type="hidden" name="_subject" id="email-subject" value="New Portfolio Message!">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Anti-spam honeypot field -->
                     <input type="text" name="_honey" style="display:none">
+
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Hi Keerthi, I'd like to talk about..." required></textarea>
                     </div>
                     <button type="submit" id="submit-btn" class="btn btn-submit">
                         <i class="fas fa-paper-plane"></i> <span>Send Message</span>
@@ -534,35 +887,173 @@
         </section>
     </main>
 
+    <!-- Elegant Minimalist Footer -->
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Pentapalli Keerthi | Connect on <a href="https://www.linkedin.com/in/pentapallikeerthi"
-                    target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <div class="container footer-content-elegant">
+            <div class="footer-divider-spark">
+                <span class="sparkle-icon">✦</span>
+            </div>
+            <p class="footer-copyright">&copy; 2026 <span class="footer-name">Pentapalli Keerthi</span>. All Rights Reserved.</p>
+            <p class="footer-subtext">Crafted with passion, modern aesthetics & clean architecture.</p>
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
-        // Skills Details Display
+        // 1. Interactive Luminous Stardust & Sparks Canvas Engine
+        (function initSparks() {
+            const canvas = document.getElementById('sparks-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            const colors = ['#38bdf8', '#818cf8', '#c084fc', '#34d399', '#fbbf24'];
+            const sparksCount = Math.min(Math.floor(window.innerWidth / 18), 75);
+            const sparks = [];
+
+            class Spark {
+                constructor() {
+                    this.reset(true);
+                }
+                reset(init = false) {
+                    this.x = Math.random() * width;
+                    this.y = init ? Math.random() * height : height + 10;
+                    this.radius = Math.random() * 2 + 0.6;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.vy = -(Math.random() * 0.45 + 0.2);
+                    this.vx = (Math.random() - 0.5) * 0.35;
+                    this.alpha = Math.random() * 0.7 + 0.2;
+                    this.fadeSpeed = Math.random() * 0.008 + 0.003;
+                    this.pulse = Math.random() * Math.PI;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.pulse += 0.035;
+                    this.currentAlpha = this.alpha + Math.sin(this.pulse) * 0.2;
+
+                    if (this.y < -10 || this.x < -10 || this.x > width + 10) {
+                        this.reset();
+                    }
+                }
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = Math.max(0.1, Math.min(1, this.currentAlpha));
+                    ctx.shadowBlur = this.radius * 6;
+                    ctx.shadowColor = this.color;
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            for (let i = 0; i < sparksCount; i++) {
+                sparks.push(new Spark());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < sparks.length; i++) {
+                    sparks[i].update();
+                    sparks[i].draw();
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+        })();
+
+        // 2. Mobile Menu Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            });
+
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    navToggle.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        }
+
+        // 3. Dynamic Rotating Role Animation in Hero
+        const roles = [
+            "ServiceNow Certified Developer (CAD & CSA)",
+            "Computer Science Undergraduate",
+            "Enterprise ITSM Automation Specialist",
+            "Full-Stack Web Developer",
+            "IoT & Cybersecurity Enthusiast"
+        ];
+        let roleIndex = 0;
+        const roleTextEl = document.getElementById('role-text');
+
+        if (roleTextEl) {
+            setInterval(() => {
+                roleIndex = (roleIndex + 1) % roles.length;
+                roleTextEl.style.opacity = '0';
+                setTimeout(() => {
+                    roleTextEl.textContent = roles[roleIndex];
+                    roleTextEl.style.opacity = '1';
+                }, 300);
+            }, 3500);
+            roleTextEl.style.transition = 'opacity 0.3s ease';
+        }
+
+        // 4. Technical Skills Interactive Display
         const skillsData = {
             programming: {
-                title: "Programming & Technologies",
-                skills: ["C", "C++", "Python", "Java", "HTML", "CSS", "JavaScript"]
+                title: "Programming & Core Technologies",
+                skills: ["C", "C++", "Python", "Java", "HTML5", "CSS3", "JavaScript (ES6)", "SQL"]
             },
             tools: {
-                title: "Tools & Platforms",
-                skills: ["GitHub", "VS Code", "Linux", "Figma", "Canva"]
-            },
-            soft: {
-                title: "Soft Skills",
+                title: "ServiceNow & Developer Tools",
                 skills: [
+                    "ServiceNow (ITSM)",
+                    "Service Operations Workspace",
+                    "ServiceNow Studio",
+                    "Flow Designer",
+                    "CMDB & CSDM",
+                    "ServiceNow CSA & CAD",
+                    "GitHub",
+                    "VS Code",
+                    "Linux",
+                    "Figma",
+                    "FastAPI",
+                    "React",
+                    "PostgreSQL",
+                    "XAMPP"
+                ]
+            },
+            domains: {
+                title: "Specializations & Soft Skills",
+                skills: [
+                    "ServiceNow ITSM Automation",
+                    "Incident & Change Management",
+                    "Internet of Things (IoT)",
+                    "Cybersecurity",
+                    "Blockchain Technology",
+                    "Machine Learning",
                     "Problem Solving",
-                    "Communication",
-                    "Teamwork",
+                    "Team Leadership",
                     "Adaptability",
-                    "Leadership",
-                    "Fast Learner",
-                    "Team Management",
-                    "Time Management"
+                    "Technical Communication"
                 ]
             }
         };
@@ -575,7 +1066,6 @@
             const tagsEl = document.getElementById('detail-tags');
 
             if (currentActiveCard === cardElement) {
-                // If clicking the currently open card, just close it
                 detailView.classList.remove('active');
                 cardElement.classList.remove('active');
                 currentActiveCard = null;
@@ -586,97 +1076,136 @@
                 currentActiveCard.classList.remove('active');
             }
 
-            // Set new active card
             cardElement.classList.add('active');
             currentActiveCard = cardElement;
 
-            // Update content dynamically
             const data = skillsData[category];
             titleEl.innerText = data.title;
             tagsEl.innerHTML = data.skills.map(skill => `<li>${skill}</li>`).join('');
-
-            // Activate view
             detailView.classList.add('active');
         }
 
-        // Scroll Reveal Animation
-        const observerOptions = {
-            threshold: 0.15
-        };
+        // 5. Certificates Category Filter Tabs
+        const filterBtns = document.querySelectorAll('.cert-filter-btn');
+        const certItems = document.querySelectorAll('.cert-item');
 
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                certItems.forEach(item => {
+                    const cat = item.getAttribute('data-category');
+                    if (filter === 'all' || cat === filter) {
+                        item.classList.remove('hidden-filter');
+                    } else {
+                        item.classList.add('hidden-filter');
+                    }
+                });
+            });
+        });
+
+        // 6. Certificate Lightbox Modal
+        const certModal = document.getElementById('cert-modal');
+        const modalImg = document.getElementById('modal-cert-img');
+        const modalTitle = document.getElementById('modal-cert-title');
+        const modalIssuer = document.getElementById('modal-cert-issuer');
+        const modalBadge = document.getElementById('modal-cert-badge');
+        const modalDownload = document.getElementById('modal-cert-download');
+
+        function openCertModal(imageSrc, title, issuer, badgeText) {
+            modalImg.src = imageSrc;
+            modalTitle.textContent = title;
+            modalIssuer.textContent = issuer;
+            modalBadge.textContent = badgeText;
+            modalDownload.href = imageSrc;
+            certModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModalDirect() {
+            certModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeCertModal(e) {
+            if (e.target === certModal) {
+                closeCertModalDirect();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && certModal.classList.contains('active')) {
+                closeCertModalDirect();
+            }
+        });
+
+        // 7. Smooth Gliding Continuous Certificates Scroll
+        const scrollContainer = document.getElementById('cert-scroll-container');
+        const scrollLeftBtn = document.getElementById('cert-scroll-left');
+        const scrollRightBtn = document.getElementById('cert-scroll-right');
+        const scrollStep = 340;
+        let isHovered = false;
+        let scrollPos = 0;
+
+        if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+            scrollLeftBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+            });
+
+            scrollRightBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: scrollStep, behavior: 'smooth' });
+            });
+
+            function smoothAutoScroll() {
+                if (!isHovered && scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+                    scrollPos += 0.45;
+                    if (scrollPos >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                        scrollPos = 0;
+                    }
+                    scrollContainer.scrollLeft = scrollPos;
+                }
+                requestAnimationFrame(smoothAutoScroll);
+            }
+            requestAnimationFrame(smoothAutoScroll);
+
+            const pauseScroll = () => { isHovered = true; };
+            const resumeScroll = () => {
+                scrollPos = scrollContainer.scrollLeft;
+                isHovered = false;
+            };
+
+            scrollContainer.addEventListener('mouseenter', pauseScroll);
+            scrollContainer.addEventListener('mouseleave', resumeScroll);
+            scrollContainer.addEventListener('touchstart', pauseScroll, { passive: true });
+            scrollContainer.addEventListener('touchend', () => setTimeout(resumeScroll, 500), { passive: true });
+
+            scrollLeftBtn.addEventListener('mouseenter', pauseScroll);
+            scrollLeftBtn.addEventListener('mouseleave', resumeScroll);
+            scrollRightBtn.addEventListener('mouseenter', pauseScroll);
+            scrollRightBtn.addEventListener('mouseleave', resumeScroll);
+
+            scrollContainer.addEventListener('scroll', () => {
+                if (isHovered) {
+                    scrollPos = scrollContainer.scrollLeft;
+                }
+            });
+        }
+
+        // 8. Scroll Reveal Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.12 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Certifications Scroll Logic
-        const scrollContainer = document.getElementById('cert-scroll-container');
-        const scrollLeftBtn = document.getElementById('cert-scroll-left');
-        const scrollRightBtn = document.getElementById('cert-scroll-right');
-        const scrollAmount = 350; // Amount to scroll per click
-        let autoScrollInterval;
-
-        // Button Clicks
-        scrollLeftBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        scrollRightBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            // If reached the end, loop back (optional, but requested "keep auto-scroll" might imply this)
-            if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 10) {
-                // Near the end, scroll back to start after a small delay if user clicks manually at the end
-            }
-        });
-
-        // Wait, a smoother auto-scroll would be better
-        let isHovered = false;
-        let scrollPos = 0;
-
-        function smoothAutoScroll() {
-            if (!isHovered) {
-                scrollPos += 0.5; // Speed
-                if (scrollPos >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-                    scrollPos = 0;
-                }
-                scrollContainer.scrollLeft = scrollPos;
-            }
-            requestAnimationFrame(smoothAutoScroll);
-        }
-
-        // Start smooth auto-scroll
-        requestAnimationFrame(smoothAutoScroll);
-
-        // Pause on hover and touch
-        const pauseScroll = () => { isHovered = true; };
-        const resumeScroll = () => {
-            scrollPos = scrollContainer.scrollLeft;
-            isHovered = false; 
-        };
-
-        scrollContainer.addEventListener('mouseenter', pauseScroll);
-        scrollContainer.addEventListener('mouseleave', resumeScroll);
-        scrollContainer.addEventListener('touchstart', pauseScroll, {passive: true});
-        scrollContainer.addEventListener('touchend', () => setTimeout(resumeScroll, 500), {passive: true});
-
-        // Also pause when buttons are hovered for better UX
-        scrollLeftBtn.addEventListener('mouseenter', pauseScroll);
-        scrollLeftBtn.addEventListener('mouseleave', resumeScroll);
-        scrollRightBtn.addEventListener('mouseenter', pauseScroll);
-        scrollRightBtn.addEventListener('mouseleave', resumeScroll);
-
-        // Update scrollPos when user manually scrolls or clicks
-        scrollContainer.addEventListener('scroll', () => {
-            if (isHovered) {
-                scrollPos = scrollContainer.scrollLeft;
-            }
-        });
-        // Contact Form Handling with FormSubmit
+        // 9. Contact Form Handling
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         const formStatus = document.getElementById('form-status');
@@ -695,18 +1224,15 @@
                 const emailVal = emailInput.value.trim();
                 const messageVal = messageInput.value.trim();
                 const subjectVal = 'New Portfolio Message from ' + nameVal;
-
                 const mailBody = 'Name: ' + nameVal + '\nEmail: ' + emailVal + '\n\nMessage:\n' + messageVal;
                 const mailtoUrl = 'mailto:pentapallikeerthi@gmail.com?subject=' + encodeURIComponent(subjectVal) + '&body=' + encodeURIComponent(mailBody);
 
-                // Local Preview Mode Check
                 if (window.location.protocol === 'file:') {
                     formStatus.className = 'form-status info show';
-                    formStatus.innerHTML = '<i class="fas fa-info-circle"></i> <strong>Local Preview Mode:</strong> Form delivery services require a web server. Please double-click <strong>start-server.bat</strong> in your project folder to test live sending, or <a href="' + mailtoUrl + '" style="color:#38bdf8; text-decoration:underline; font-weight:600;">click here to send via Email App</a>.';
+                    formStatus.innerHTML = '<i class="fas fa-info-circle"></i> <strong>Local Preview:</strong> Run `node server.js` to test live sending, or <a href="' + mailtoUrl + '" style="color:#38bdf8; text-decoration:underline; font-weight:600;">click here to send via Email App</a>.';
                     return;
                 }
 
-                // Web server mode (http://localhost:3000 or published website)
                 submitBtn.disabled = true;
                 if (btnIcon) btnIcon.className = 'fas fa-spinner fa-spin';
                 if (btnText) btnText.textContent = 'Sending...';
@@ -735,16 +1261,13 @@
 
                     if (response.ok && (data.success === 'true' || data.success === true)) {
                         formStatus.className = 'form-status success show';
-                        formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully to pentapallikeerthi@gmail.com.';
+                        formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.';
                         contactForm.reset();
-                    } else if (data.message && data.message.includes('Activation')) {
-                        formStatus.className = 'form-status info show';
-                        formStatus.innerHTML = '<i class="fas fa-envelope-open-text"></i> FormSubmit activation required for this domain. Please check your inbox (or spam) at pentapallikeerthi@gmail.com to activate.';
                     } else {
-                        throw new Error(data.message || 'Unable to submit the message.');
+                        throw new Error(data.message || 'Unable to submit message.');
                     }
                 } catch (error) {
-                    console.warn('Form submission encountered an issue:', error);
+                    console.warn('Form submission notice:', error);
                     formStatus.className = 'form-status error show';
                     formStatus.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + (error.message || 'Could not send message.') + ' <a href="' + mailtoUrl + '" style="color:#38bdf8; text-decoration:underline; margin-left:6px;">Send directly via Email</a>';
                 } finally {

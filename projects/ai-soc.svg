@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bezel-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a334d"/>
+      <stop offset="50%" stop-color="#141c33"/>
+      <stop offset="100%" stop-color="#0a0f20"/>
+    </linearGradient>
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1429"/>
+      <stop offset="50%" stop-color="#070b18"/>
+      <stop offset="100%" stop-color="#03060f"/>
+    </linearGradient>
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="60%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Tablet / Display Bezel -->
+  <rect x="10" y="10" width="830" height="540" rx="28" fill="url(#bezel-grad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="16" y="16" width="818" height="528" rx="24" fill="#080c1d" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+  
+  <!-- Camera Pinhole -->
+  <circle cx="425" cy="28" r="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="425" cy="28" r="1.5" fill="#38bdf8"/>
+
+  <!-- Screen Content Area -->
+  <g transform="translate(32, 42)">
+    <rect width="786" height="476" rx="16" fill="url(#screen-grad)" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Top App Bar -->
+    <rect width="786" height="42" rx="16" fill="#0f172a"/>
+    <rect y="30" width="786" height="12" fill="#0f172a"/>
+    
+    <!-- Status Dots -->
+    <circle cx="24" cy="21" r="5" fill="#34d399"/>
+    <text x="38" y="26" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" letter-spacing="1">SENTRIQ <tspan fill="#38bdf8">AI-SOC</tspan></text>
+    
+    <rect x="180" y="11" width="150" height="20" rx="10" fill="rgba(56,189,248,0.12)" stroke="rgba(56,189,248,0.3)"/>
+    <text x="195" y="25" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700">● LIVE TELEMETRY STREAM</text>
+
+    <text x="615" y="26" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="700">ACCURACY: 96.67%</text>
+
+    <!-- LEFT PANEL: Code & Attack Log -->
+    <g transform="translate(18, 55)">
+      <rect width="210" height="235" rx="10" fill="#090e21" stroke="rgba(255,255,255,0.08)"/>
+      <rect width="210" height="26" rx="10" fill="#131c36"/>
+      <rect y="16" width="210" height="10" fill="#131c36"/>
+      <text x="12" y="18" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">// TELEMETRY INGESTION</text>
+      
+      <!-- Telemetry Code lines -->
+      <g transform="translate(12, 38)" font-family="monospace" font-size="8.5">
+        <text y="12" fill="#38bdf8">&gt; proto: TCP_SYN</text>
+        <text y="26" fill="#94a3b8">&gt; src: 192.168.1.104</text>
+        <text y="40" fill="#94a3b8">&gt; dst_port: 8080 (HTTP)</text>
+        <text y="54" fill="#f59e0b">&gt; sliding_win: 15m</text>
+        <text y="68" fill="#ef4444">&gt; mitre: T1110.001</text>
+        <text y="82" fill="#a855f7">&gt; shap_val: +0.879</text>
+        <text y="96" fill="#34d399">&gt; ensemble: 96.67%</text>
+        <text y="110" fill="#94a3b8">&gt; noise_filter: 93.3%</text>
+        <text y="128" fill="#ef4444" font-weight="700">[CRITICAL ANOMALY]</text>
+        <text y="142" fill="#38bdf8">&gt; action: CONTAINED</text>
+        <text y="156" fill="#64748b">&gt; audit_hash: 0x8a9f...</text>
+      </g>
+
+      <!-- Sub-box: Rule consensus -->
+      <g transform="translate(0, 245)">
+        <rect width="210" height="155" rx="10" fill="#090e21" stroke="rgba(255,255,255,0.08)"/>
+        <text x="12" y="24" fill="#a855f7" font-family="sans-serif" font-size="10" font-weight="700">SHAP Feature Attribution</text>
+        
+        <text x="12" y="48" fill="#94a3b8" font-family="sans-serif" font-size="8.5">Duration</text>
+        <rect x="70" y="41" width="125" height="7" rx="3.5" fill="#1e293b"/>
+        <rect x="70" y="41" width="105" height="7" rx="3.5" fill="#a855f7"/>
+
+        <text x="12" y="68" fill="#94a3b8" font-family="sans-serif" font-size="8.5">SYN Rate</text>
+        <rect x="70" y="61" width="125" height="7" rx="3.5" fill="#1e293b"/>
+        <rect x="70" y="61" width="88" height="7" rx="3.5" fill="#38bdf8"/>
+
+        <text x="12" y="88" fill="#94a3b8" font-family="sans-serif" font-size="8.5">Dst Entropy</text>
+        <rect x="70" y="81" width="125" height="7" rx="3.5" fill="#1e293b"/>
+        <rect x="70" y="81" width="65" height="7" rx="3.5" fill="#34d399"/>
+
+        <rect x="12" y="105" width="186" height="34" rx="6" fill="#1e153b" stroke="#a855f7" stroke-width="1"/>
+        <text x="24" y="126" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="700">XAI CONSENSUS VERIFIED</text>
+      </g>
+    </g>
+
+    <!-- CENTER PANEL: Interactive Network Attack Graph (Reference 1 Style) -->
+    <g transform="translate(242, 55)">
+      <rect width="320" height="400" rx="10" fill="#090e21" stroke="rgba(56,189,248,0.2)"/>
+      <text x="18" y="24" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="700">Multi-Stage Exploit Topology</text>
+      
+      <!-- Graph Network Connections -->
+      <g stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5" filter="url(#glow-filter)">
+        <line x1="160" y1="90" x2="100" y2="150"/>
+        <line x1="160" y1="90" x2="220" y2="150"/>
+        <line x1="100" y1="150" x2="80" y2="230"/>
+        <line x1="100" y1="150" x2="160" y2="200"/>
+        <line x1="220" y1="150" x2="160" y2="200"/>
+        <line x1="220" y1="150" x2="240" y2="230"/>
+        <line x1="160" y1="200" x2="160" y2="290"/>
+        <line x1="80" y1="230" x2="110" y2="330"/>
+        <line x1="240" y1="230" x2="210" y2="330"/>
+        <line x1="160" y1="290" x2="110" y2="330"/>
+        <line x1="160" y1="290" x2="210" y2="330"/>
+        <line x1="110" y1="330" x2="160" y2="365"/>
+        <line x1="210" y1="330" x2="160" y2="365"/>
+      </g>
+
+      <!-- Graph Nodes -->
+      <!-- Center Root Node -->
+      <circle cx="160" cy="90" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5"/>
+      <circle cx="160" cy="90" r="6" fill="#38bdf8"/>
+
+      <!-- Level 2 Nodes -->
+      <circle cx="100" cy="150" r="11" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+      <circle cx="100" cy="150" r="4" fill="#818cf8"/>
+      
+      <circle cx="220" cy="150" r="11" fill="#0f172a" stroke="#818cf8" stroke-width="2"/>
+      <circle cx="220" cy="150" r="4" fill="#818cf8"/>
+
+      <!-- Level 3 Central Hub -->
+      <circle cx="160" cy="200" r="18" fill="#1e1035" stroke="#a855f7" stroke-width="2.5"/>
+      <circle cx="160" cy="200" r="8" fill="#c084fc"/>
+
+      <!-- Level 3 Side Nodes -->
+      <circle cx="80" cy="230" r="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <circle cx="80" cy="230" r="4" fill="#34d399"/>
+
+      <circle cx="240" cy="230" r="10" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="240" cy="230" r="4" fill="#f59e0b"/>
+
+      <!-- Level 4 Core Target Node -->
+      <circle cx="160" cy="290" r="15" fill="#2d0d15" stroke="#ef4444" stroke-width="2.5"/>
+      <circle cx="160" cy="290" r="6" fill="#ef4444"/>
+
+      <!-- Level 5 Nodes -->
+      <circle cx="110" cy="330" r="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="110" cy="330" r="3" fill="#38bdf8"/>
+
+      <circle cx="210" cy="330" r="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="210" cy="330" r="3" fill="#38bdf8"/>
+
+      <!-- Leaf Node -->
+      <circle cx="160" cy="365" r="8" fill="#34d399"/>
+
+      <!-- Node Badges -->
+      <rect x="185" y="190" width="80" height="18" rx="4" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="0.8"/>
+      <text x="190" y="202" fill="#c084fc" font-family="sans-serif" font-size="8" font-weight="700">Triage Engine</text>
+    </g>
+
+    <!-- RIGHT PANEL: Speedometer Threat Gauge & Containment -->
+    <g transform="translate(576, 55)">
+      <!-- Box 1: Gauge Meter -->
+      <rect width="192" height="190" rx="10" fill="#090e21" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="700">RISK SEVERITY INDEX</text>
+
+      <!-- Semi-Circle Gauge Arc -->
+      <path d="M 30 115 A 65 65 0 0 1 162 115" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 30 115 A 65 65 0 0 1 145 75" fill="none" stroke="url(#gauge-grad)" stroke-width="12" stroke-linecap="round"/>
+      
+      <!-- Needle -->
+      <line x1="96" y1="115" x2="135" y2="78" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="96" cy="115" r="7" fill="#ef4444"/>
+
+      <text x="96" y="145" text-anchor="middle" fill="#ef4444" font-family="sans-serif" font-size="22" font-weight="800">92.4%</text>
+      <text x="96" y="165" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Deterministic 4-Factor</text>
+
+      <!-- Box 2: Automated HITL Containment -->
+      <g transform="translate(0, 202)">
+        <rect width="192" height="198" rx="10" fill="#090e21" stroke="rgba(52,211,153,0.3)"/>
+        <text x="14" y="24" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="700">HITL CONTAINMENT</text>
+        
+        <rect x="14" y="38" width="164" height="42" rx="6" fill="#132a22"/>
+        <text x="24" y="56" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800">FIREWALL DROP</text>
+        <text x="24" y="70" fill="#a7f3d0" font-family="sans-serif" font-size="9">Subnet 192.168.1.0/24</text>
+
+        <rect x="14" y="90" width="164" height="42" rx="6" fill="#1e1838"/>
+        <text x="24" y="108" fill="#a855f7" font-family="sans-serif" font-size="12" font-weight="800">AGENT AUDIT</text>
+        <text x="24" y="122" fill="#c084fc" font-family="sans-serif" font-size="9">Immutable Dossier Log</text>
+
+        <rect x="14" y="142" width="164" height="42" rx="6" fill="linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)"/>
+        <text x="35" y="167" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="800">SYSTEM PROTECTED</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
